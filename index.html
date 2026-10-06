@@ -1,131 +1,352 @@
 <!DOCTYPE html>
-<html lang="zh‑CN">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF‑8">
-    <meta name="viewport" content="width=device‑width, initial‑scale=1.0">
-    <title>补天云网站(BUTIANYUN.COM) 补天云机器视觉 补天云计算机视觉</title>
-    <meta name="description" content="补天云，面向大中专、本科院校的计算机视觉课程商业软件产品，A/B/C系列机器视觉课程实践教学系统">
-    <!-- CDN引入jQuery、jQuery‑UI -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery‑ui@1.13.2/dist/jquery‑ui.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery‑ui@1.13.2/dist/themes/base/jquery‑ui.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>补天云网站</title>
+    <!-- 国内CDN jQuery & jQuery UI -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css">
     <link rel="stylesheet" href="./index.css">
+    <style>
+        table.practice-table{
+            width:100%;
+            border-collapse: collapse;
+            margin:16px 0 24px;
+        }
+        table.practice-table th, table.practice-table td{
+            border:1px solid #ccc;
+            padding:10px 12px;
+            text-align:left;
+        }
+        table.practice-table th{
+            background-color:#f6f6f6;
+        }
+    </style>
 </head>
 <body>
-<div class="page‑wrap">
-    <!-- 头部标题区域 -->
-    <header class="site‑header">
-        <div class="container">
-            <h1 class="site‑title">补天云网站 <span class="domain">BUTIANYUN.COM</span></h1>
-            <p class="site‑subtitle">补天云机器视觉 · 补天云计算机视觉 — 院校计算机视觉课程专业教学软件</p>
-        </div>
-    </header>
-
-    <!-- jQuery‑UI Tabs 标签页容器 -->
-    <div id="product‑tabs" class="container">
-        <ul>
-            <li><a href="#tab‑a">补天云机器视觉（A系列）</a></li>
-            <li><a href="#tab‑bc">补天云计算机视觉（B系列+C系列）</a></li>
-            <li><a href="#tab‑contact">联系我们</a></li>
-        </ul>
-
-        <!-- Tab1：A系列 补天云机器视觉 大中专院校 -->
-        <div id="tab‑a">
-            <section class="product‑intro">
-                <h2>补天云机器视觉｜A系列：计算机视觉应用实践软件</h2>
-                <div class="target‑customer">适用对象：大专院校、中专院校</div>
-                <div class="sell‑points">
-                    <h3>产品核心优势</h3>
-                    <ul>
-                        <li><strong>低成本</strong>：普通机房CPU即可运行，无需GPU服务器，降低院校硬件采购与运维成本；支持院系独立采购，简化审批流程，一次采购永久授权使用。</li>
-                        <li><strong>免依赖</strong>：软件完成环境封装，消除框架包版本冲突问题，教师备课、学生上机无需复杂环境部署。</li>
-                        <li><strong>纯软件方案</strong>：完整教学载体，配套完整教学素材、数据集、预训练模型、操作手册，支撑课堂完整教学闭环。</li>
+    <div class="container">
+        <header class="page-header">
+            <h1>BUTIANYUN.COM 补天云视觉产品体系</h1>
+            <p class="subtitle">面向大中专院校｜计算机视觉 / 机器视觉课程完整算法实践商业软件产品</p>
+        </header>
+        <div id="tabs">
+            <ul>
+                <li><a href="#tab‑a">A系列</a></li>
+                <li><a href="#tab‑b">B系列</a></li>
+                <li><a href="#tab‑c">C系列</a></li>
+                <li><a href="#tab‑contact">联系我们</a></li>
+            </ul>
+            <div id="tab‑a">
+                <h2>补天云视觉A系列 — 计算机视觉应用实践软件产品</h2>
+                <div class="feature-block">
+                    <h3>产品特点</h3>
+                    <ul class="feature-list">
+                        <li><strong>低成本</strong>：纯CPU运行，无需GPU服务器、高性能显卡，院校普通机房计算机；一次采购永久授权，降低院系硬件采购与运维成本。</li>
+                        <li><strong>免依赖</strong>：全部程序为独立可执行程序，无需配置Python环境、无需手动安装各类算法库，消除部署软硬件依赖繁琐问题。</li>
+                        <li><strong>纯软件</strong>：完整软件方案，不需要额外外接专用硬件设备，开箱即可开展课程教学工作。</li>
                     </ul>
                 </div>
-                <div class="system‑scope">
+                <div class="practice-system">
                     <h3>课程实践体系</h3>
-                    <p>覆盖<strong>14大技术模块，合计70项完整课程实践项目</strong>，覆盖图像处理、图像分类、目标检测、图像分割、姿态检测、面部识别、目标跟踪、手势识别、模型可视化、数据标注、数据增强、数据处理、网络训练、模型部署完整技术链路，满足机器视觉专业课程全流程教学实施要求。</p>
-                    <div class="module‑list">
-                        <div class="module‑item">图像处理模块</div>
-                        <div class="module‑item">图像分类模块</div>
-                        <div class="module‑item">目标检测模块</div>
-                        <div class="module‑item">图像分割模块</div>
-                        <div class="module‑item">姿态检测模块</div>
-                        <div class="module‑item">面部识别模块</div>
-                        <div class="module‑item">目标跟踪模块</div>
-                        <div class="module‑item">手势识别模块</div>
-                        <div class="module‑item">可视化模块</div>
-                        <div class="module‑item">数据标注模块</div>
-                        <div class="module‑item">数据增强模块</div>
-                        <div class="module‑item">数据处理模块</div>
-                        <div class="module‑item">网络训练模块</div>
-                        <div class="module‑item">模型部署模块</div>
+                    <p>A系列包含14大技术主题，共70个应用实践，配套可运行程序、操作手册。A系列应用实践采用多种基于Python、C++的开源框架实现。</p>
+                    <table class="practice-table">
+                        <thead>
+                            <tr>
+                                <th>编号</th>
+                                <th>实践类型</th>
+                                <th>实践名称</th>
+                                <th>实践程序</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>0101</td><td>图像处理</td><td>照片全景图拼接软件</td><td>OPENCV butianyun_cv_full_scene.exe</td></tr>
+                            <tr><td>0201</td><td>图像处理</td><td>人像抠图软件</td><td>OPENCV butianyun_cv_person_contour.exe</td></tr>
+                            <tr><td>0301</td><td>图像处理</td><td>照片美化软件</td><td>OPENCV butianyun_cv_photo_beautify.exe</td></tr>
+                            <tr><td>0402</td><td>图像分类</td><td>手写数字识别软件</td><td>PYTORCH butianyun_yolo_classification.exe</td></tr>
+                            <tr><td>0502</td><td>图像分类</td><td>手写数字识别软件</td><td>PYTORCH butianyun_yolo_classification_from_scratch.exe</td></tr>
+                            <tr><td>0602</td><td>图像分类</td><td>手写数字识别软件</td><td>SCRATCH butianyun_yolo_classification_from_scratch_exe.exe</td></tr>
+                            <tr><td>0702</td><td>图像分类</td><td>图像分类软件</td><td>CIFA butianyun_yolo_classification_cifa.exe</td></tr>
+                            <tr><td>0803</td><td>目标检测</td><td>猫狗识别目标检测软件</td><td>butianyun_yolo_cat_detection.exe</td></tr>
+                            <tr><td>0903</td><td>目标检测</td><td>视频目标检测软件</td><td>YOLO butianyun_yolo_object_detection_video.exe</td></tr>
+                            <tr><td>1003</td><td>目标检测</td><td>目标检测预演软件</td><td>YOLO butianyun_yolo_object_detection_predict.exe</td></tr>
+                            <tr><td>1103</td><td>目标检测</td><td>水果目标检测软件</td><td>YOLO butianyun_yolo_fruit_object_detection.exe</td></tr>
+                            <tr><td>1203</td><td>目标检测</td><td>水果种类识别软件</td><td>YOLO butianyun_yolo_fruits_detect_img.exe</td></tr>
+                            <tr><td>1303</td><td>目标检测</td><td>目标检测训练测试调试软件</td><td>PYTORCH butianyun_yolo_object_detection_main.exe</td></tr>
+                            <tr><td>1404</td><td>图像分割</td><td>图像分割实例软件</td><td>YOLO butianyun_yolo_instance_segmentation_video.exe</td></tr>
+                            <tr><td>1504</td><td>图像分割</td><td>图像分割实例软件</td><td>YOLO butianyun_yolo_instance_segmentation_main.exe</td></tr>
+                            <tr><td>1604</td><td>图像分割</td><td>图像分割实例软件</td><td>YOLO butianyun_yolo_instance_segmentation_img.exe</td></tr>
+                            <tr><td>1704</td><td>图像分割</td><td>裂缝检测图像分割实例软件</td><td>butianyun_crack_seg_detector.exe</td></tr>
+                            <tr><td>1805</td><td>姿态检测</td><td>人体姿态估计软件</td><td>YOLO butianyun_yolo_pull_up_detection.exe</td></tr>
+                            <tr><td>1905</td><td>姿态检测</td><td>视频姿态检测软件</td><td>YOLO butianyun_cv_pose_video_detection.exe</td></tr>
+                            <tr><td>2005</td><td>姿态检测</td><td>图像姿态检测软件</td><td>YOLO butianyun_yolo_pose_detection_img.exe</td></tr>
+                            <tr><td>2106</td><td>面部识别</td><td>人脸录入识别软件</td><td>OPENCV_HAAR butianyun_face_recognition_opencv_haar.exe</td></tr>
+                            <tr><td>2206</td><td>面部识别</td><td>人脸识别软件</td><td>OPENCV_DNN butianyun_face_recognition_opencv_dnn.exe</td></tr>
+                            <tr><td>2306</td><td>面部识别</td><td>人脸图片识别</td><td>DEEPFACE butianyun_face_recognition_deepface.exe</td></tr>
+                            <tr><td>2406</td><td>面部识别</td><td>图片表情识别</td><td>DEEPFACE butianyun_emotion_recognition_deepface.exe</td></tr>
+                            <tr><td>2506</td><td>面部识别</td><td>图片表情部分软件</td><td>DEEPFACE butianyun_face_recognition_img_deepface.exe</td></tr>
+                            <tr><td>2607</td><td>面部识别</td><td>人脸检测软件</td><td>OPENCV_DLIB_DEEPFACE butianyun_face_detector.exe</td></tr>
+                            <tr><td>2708</td><td>手部跟踪</td><td>目标跟踪软件</td><td>YOLO butianyun_yolo_track.exe</td></tr>
+                            <tr><td>2808</td><td>手势识别</td><td>手势识别软件</td><td>OPENCV butianyun_gesture_recognition_video_opencv.exe</td></tr>
+                            <tr><td>2908</td><td>手势识别</td><td>视频手势识别</td><td>OPENCV butianyun_gesture_recognition_video_opencv.exe</td></tr>
+                            <tr><td>3008</td><td>手势识别</td><td>手势识别</td><td>YOLO butianyun_gesture_recognition_video_yolo.exe</td></tr>
+                            <tr><td>3109</td><td>可视化</td><td>热力图可视化软件</td><td>YOLO butianyun_yolo_heatmap.exe</td></tr>
+                            <tr><td>3209</td><td>可视化</td><td>热力图可视化软件</td><td>YOLO butianyun_yolo_heatman_main.exe</td></tr>
+                            <tr><td>3309</td><td>可视化</td><td>卷积网络结构可视化软件</td><td>YOLO butianyun_yolo_cnn_network_structure_yolo.exe</td></tr>
+                            <tr><td>3409</td><td>可视化</td><td>模型网络结构可视化软件</td><td>YOLO butianyun_yolo_model_network_structure_yolo.exe</td></tr>
+                            <tr><td>3509</td><td>可视化</td><td>模型网络结构可视化软件</td><td>PYTORCH butianyun_yolo_model_network_structure_pytorch.exe</td></tr>
+                            <tr><td>3609</td><td>可视化</td><td>模型网络结构可视化软件</td><td>ONNX butianyun_yolo_model_network_structure_onnx.exe</td></tr>
+                            <tr><td>3709</td><td>可视化</td><td>模型数据产器可视化软件</td><td>PYTORCH butianyun_model_generator_pytorch.exe</td></tr>
+                            <tr><td>3809</td><td>可视化</td><td>模型数据产器可视化软件</td><td>PYTORCH butyun_yolo_get_parameter_main.exe</td></tr>
+                            <tr><td>3909</td><td>可视化</td><td>模型数据产器可视化软件</td><td>PYTORCH butianyun_yolo_get_parameter_main_pytorch.exe</td></tr>
+                            <tr><td>4011</td><td>数据增强</td><td>数据标注软件</td><td>JSON butianyun_data_augmentation_gui.exe</td></tr>
+                            <tr><td>4111</td><td>数据增强</td><td>数据增强软件</td><td>PYTORCH butianyun_data_augmentation_gui.exe</td></tr>
+                            <tr><td>4211</td><td>数据增强</td><td>数据增强软件</td><td>CONSOLE butianyun_data_augmentation_console.exe</td></tr>
+                            <tr><td>4312</td><td>数据处理</td><td>数据集提取软件</td><td>fMNIST butianyun_mnist_extractor.exe</td></tr>
+                            <tr><td>4412</td><td>数据处理</td><td>数据集采集软件</td><td>VOC butianyun_cv_dataset_voc_ext.exe</td></tr>
+                            <tr><td>4512</td><td>数据处理</td><td>数据集采集软件</td><td>VOC butianyun_cv_dataset_collector_voc.exe</td></tr>
+                            <tr><td>4612</td><td>数据处理</td><td>数据集处理软件</td><td>VOC butianyun_cv_dataset_collector_voc_exe.exe</td></tr>
+                            <tr><td>4713</td><td>网络训练</td><td>目标检测预演软件</td><td>YOLO butianyun_yolo_object_detection_verify.exe</td></tr>
+                            <tr><td>4813</td><td>网络训练</td><td>目标检测测试软件</td><td>YOLO butianyun_yolo_object_detection_train.exe</td></tr>
+                            <tr><td>4913</td><td>网络训练</td><td>目标检测训练测试复现软件</td><td>YOLO butianyun_yolo_object_detection_retrain_exe.exe</td></tr>
+                            <tr><td>5013</td><td>网络训练</td><td>目标检测训练测试复现软件</td><td>YOLO butianyun_yolo_object_detection_train_exe.exe</td></tr>
+                            <tr><td>5114</td><td>模型部署</td><td>模型转换软件</td><td>PYTOLO-ONNX butianyun_yolo_object_detection_convert_yolo_to_onnx.exe</td></tr>
+                            <tr><td>5214</td><td>模型部署</td><td>图像目标检测软件</td><td>ONNX_PYTHON butianyun_yolo_object_detection_yolo_python.exe</td></tr>
+                            <tr><td>5314</td><td>模型部署</td><td>视频目标检测软件</td><td>ONNX_PYTHON butianyun_yolo_object_detection_video_python.exe</td></tr>
+                            <tr><td>5414</td><td>模型部署</td><td>语义分割软件</td><td>ONNX_PYTHON butianyun_semantic_segmentation_onnx_detection_python.exe</td></tr>
+                            <tr><td>5514</td><td>模型部署</td><td>图像目标检测软件</td><td>ONNX_CPP butianyun_onnx_obj_img_cpp.exe</td></tr>
+                            <tr><td>5614</td><td>模型部署</td><td>视频目标检测软件</td><td>ONNX_CPP butianyun_onnx_obj_video_cpp.exe</td></tr>
+                            <tr><td>5714</td><td>模型部署</td><td>图像语义分割软件</td><td>ONNX_CPP butianyun_onnx_semantic_img_cpp.exe</td></tr>
+                            <tr><td>5814</td><td>模型部署</td><td>视频语义分割软件</td><td>ONNX_CPP butianyun_onnx_semantic_video_cpp.exe</td></tr>
+                            <tr><td>5914</td><td>模型部署</td><td>图像语义分割软件</td><td>OPENCV_CPP butianyun_opencv_onnx_semantic_img_cpp.exe</td></tr>
+                            <tr><td>6014</td><td>模型部署</td><td>视频语义分割软件</td><td>OPENCV_CPP butianyun_opencv_onnx_semantic_video_cpp.exe</td></tr>
+                            <tr><td>6114</td><td>模型部署</td><td>模型转换软件</td><td>PYTOLO-OpenVINO butianyun_object_detection_convert_yolo_to_openvino.exe</td></tr>
+                            <tr><td>6214</td><td>模型部署</td><td>图像目标检测软件</td><td>OpenVINO_PYTHON butianyun_yolo_object_detection_img_python.exe</td></tr>
+                            <tr><td>6314</td><td>模型部署</td><td>视频目标检测软件</td><td>OpenVINO_PYTHON butianyun_semantic_segmentation_openvino_detection_python.exe</td></tr>
+                            <tr><td>6414</td><td>模型部署</td><td>视频目标检测软件</td><td>OPENCV_PYTHON butianyun_yolo_opencv_detection_video_python.exe</td></tr>
+                            <tr><td>6514</td><td>模型部署</td><td>图像目标检测软件</td><td>OPENCV_CPP butianyun_yolo_opencv_detection_img_cpp.exe</td></tr>
+                            <tr><td>6614</td><td>模型部署</td><td>视频目标检测软件</td><td>OPENCV_CPP butianyun_yolo_opencv_detection_video_cpp.exe</td></tr>
+                            <tr><td>6714</td><td>模型部署</td><td>图像语义分割软件</td><td>OPENCV_CPP butianyun_opencv_semantic_img_cpp.exe</td></tr>
+                            <tr><td>6814</td><td>模型部署</td><td>视频语义分割软件</td><td>OPENCV_CPP butianyun_opencv_semantic_video_cpp.exe</td></tr>
+                            <tr><td>6914</td><td>模型部署</td><td>图像语义分割软件</td><td>OPENCV_CPP butianyun_opencv_img_segmentation_img_cpp.exe</td></tr>
+                            <tr><td>7014</td><td>模型部署</td><td>视频语义分割软件</td><td>OPENCV_CPP butianyun_opencv_img_segmentation_video_cpp.exe</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="tab‑b">
+                <h2>补天云视觉B系列 — 传统算法实践</h2>
+                <div class="feature-block">
+                    <h3>产品特点</h3>
+                    <ul class="feature-list">
+                        <li><strong>低成本</strong>：基于普通计算机CPU完成全部运算，无需GPU算力集群，适配院校机房环境。</li>
+                        <li><strong>免依赖</strong>：独立封装可执行程序，规避复杂开发环境配置，直接面向课程教学使用。</li>
+                        <li><strong>纯软件</strong>：无专用硬件绑定，专注机器视觉与计算机视觉课程算法实践。</li>
+                    </ul>
+                </div>
+                <div class="practice-system">
+                    <h3>课程实践体系</h3>
+                    <p>B系列包含100个传统算法，每个算法配套概念、原理、实现源码以及运行效果。B系列算法核心实现采用Python API实现，图像读写等操作使用OpenCV API实现。</p>
+                    <table class="practice-table">
+                        <thead>
+                            <tr>
+                                <th>编号</th>
+                                <th>实践类型</th>
+                                <th>实践名称</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>01</td><td>B系列传统算法</td><td>均值滤波算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>02</td><td>B系列传统算法</td><td>高斯滤波算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>03</td><td>B系列传统算法</td><td>中值滤波算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>04</td><td>B系列传统算法</td><td>双边滤波算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>05</td><td>B系列传统算法</td><td>直方图均衡化算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>06</td><td>B系列传统算法</td><td>自适应直方图均衡化算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>07</td><td>B系列传统算法</td><td>限制对比度自适应直方图均衡化算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>08</td><td>B系列传统算法</td><td>伽马校正算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>09</td><td>B系列传统算法</td><td>对数变换算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>10</td><td>B系列传统算法</td><td>线性变换算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>11</td><td>B系列传统算法</td><td>高斯噪声去除算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>12</td><td>B系列传统算法</td><td>直方图匹配算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>13</td><td>B系列传统算法</td><td>引导滤波算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>14</td><td>B系列传统算法</td><td>椒盐噪声去除算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>15</td><td>B系列传统算法</td><td>脉冲噪声滤波算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>16</td><td>B系列传统算法</td><td>图像灰度化算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>17</td><td>B系列传统算法</td><td>形态学膨胀算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>18</td><td>B系列传统算法</td><td>形态学腐蚀算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>19</td><td>B系列传统算法</td><td>形态学开运算算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>20</td><td>B系列传统算法</td><td>形态学闭运算算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>21</td><td>B系列传统算法</td><td>顶帽变换算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>22</td><td>B系列传统算法</td><td>图像旋转算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>23</td><td>B系列传统算法</td><td>图像缩放算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>24</td><td>B系列传统算法</td><td>图像裁剪算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>25</td><td>B系列传统算法</td><td>图像镜像翻转算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>26</td><td>B系列传统算法</td><td>图像金字塔构建算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>27</td><td>B系列传统算法</td><td>图像去雾暗通道先验算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>28</td><td>B系列传统算法</td><td>色彩量化算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>29</td><td>B系列传统算法</td><td>FAST角点检测算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>30</td><td>B系列传统算法</td><td>ORB特征提取与描述算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>31</td><td>B系列传统算法</td><td>边缘检测Prewitt算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>32</td><td>B系列传统算法</td><td>Roberts边缘检测算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>33</td><td>B系列传统算法</td><td>边缘检测Canny算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>34</td><td>B系列传统算法</td><td>离散余弦变换特征提取算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>35</td><td>B系列传统算法</td><td>方向梯度直方图特征提取算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>36</td><td>B系列传统算法</td><td>LBP特征提取算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>37</td><td>B系列传统算法</td><td>CSLBP特征提取算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>38</td><td>B系列传统算法</td><td>边缘检测Laplacian算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>39</td><td>B系列传统算法</td><td>极值稳定区域检测算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>40</td><td>B系列传统算法</td><td>简单线性迭代聚类算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>41</td><td>B系列传统算法</td><td>颜色空间转换算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>42</td><td>B系列传统算法</td><td>尺度不变特征变换算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>43</td><td>B系列传统算法</td><td>离散余弦变换特征提取算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>44</td><td>B系列传统算法</td><td>最大稳定极值区域检测算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>45</td><td>B系列传统算法</td><td>选择性搜索区域推荐算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>46</td><td>B系列传统算法</td><td>密集特征提取算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>47</td><td>B系列传统算法</td><td>傅里叶变换特征提取算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>48</td><td>B系列传统算法</td><td>Gabor滤波器特征提取算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>49</td><td>B系列传统算法</td><td>阈值分割全局阈值算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>50</td><td>B系列传统算法</td><td>边缘检测LOG算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>51</td><td>B系列传统算法</td><td>阈值分割迭代阈值算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>52</td><td>B系列传统算法</td><td>阈值分割最大类间方差算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>53</td><td>B系列传统算法</td><td>区域生长分割算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>54</td><td>B系列传统算法</td><td>区域分裂与合并分割算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>55</td><td>B系列传统算法</td><td>分水岭分割算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>56</td><td>B系列传统算法</td><td>活动轮廓模型分割算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>57</td><td>B系列传统算法</td><td>水平集图像分割算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>58</td><td>B系列传统算法</td><td>梯度矢量流活动轮廓分割算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>59</td><td>B系列传统算法</td><td>K-Means聚类图像分割算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>60</td><td>B系列传统算法</td><td>模糊C均值聚类图像分割算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>61</td><td>B系列传统算法</td><td>SIFT特征提取与描述算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>62</td><td>B系列传统算法</td><td>Shi-Tomasi角点检测算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>63</td><td>B系列传统算法</td><td>SURF特征提取与描述算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>64</td><td>B系列传统算法</td><td>Harris角点检测算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>65</td><td>B系列传统算法</td><td>BRISK特征提取与描述算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>66</td><td>B系列传统算法</td><td>BRIEF特征描述算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>67</td><td>B系列传统算法</td><td>FREAK特征描述算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>68</td><td>B系列传统算法</td><td>边缘检测Sobel算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>69</td><td>B系列传统算法</td><td>局部相位量化特征提取算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>70</td><td>B系列传统算法</td><td>形态学骨架提取算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>71</td><td>B系列传统算法</td><td>谱聚类图像分割算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>72</td><td>B系列传统算法</td><td>均值漂移图像分割算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>73</td><td>B系列传统算法</td><td>圆形检测概率霍夫变换算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>74</td><td>B系列传统算法</td><td>马尔可夫随机场图像分割算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>75</td><td>B系列传统算法</td><td>条件随机机场图像分割算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>76</td><td>B系列传统算法</td><td>实例分割掩码生成算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>77</td><td>B系列传统算法</td><td>超像素分割SLIC算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>78</td><td>B系列传统算法</td><td>滑动窗口目标检测算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>79</td><td>B系列传统算法</td><td>积分图目标检测算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>80</td><td>B系列传统算法</td><td>级联分类器目标检测算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>81</td><td>B系列传统算法</td><td>基于图割的图像分割算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>82</td><td>B系列传统算法</td><td>交并比计算算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>83</td><td>B系列传统算法</td><td>非极大值抑制算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>84</td><td>B系列传统算法</td><td>卡尔曼滤波目标跟踪算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>85</td><td>B系列传统算法</td><td>粒子滤波目标跟踪算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>86</td><td>B系列传统算法</td><td>均值漂移目标跟踪算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>87</td><td>B系列传统算法</td><td>连续自适应均值漂移目标跟踪算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>88</td><td>B系列传统算法</td><td>相关滤波目标跟踪算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>89</td><td>B系列传统算法</td><td>核相关滤波目标跟踪算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>90</td><td>B系列传统算法</td><td>多目标跟踪匈牙利匹配算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>91</td><td>B系列传统算法</td><td>判别相关滤波目标跟踪算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>92</td><td>B系列传统算法</td><td>多目标跟踪余弦距离匹配算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>93</td><td>B系列传统算法</td><td>基于特征的图像配准算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>94</td><td>B系列传统算法</td><td>基于区域的图像配准算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>95</td><td>B系列传统算法</td><td>同态滤波算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>96</td><td>B系列传统算法</td><td>多尺度Retinex增强算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>97</td><td>B系列传统算法</td><td>PCA主成分分析算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>98</td><td>B系列传统算法</td><td>线段检测LSD算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>99</td><td>B系列传统算法</td><td>光流法目标追踪算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                            <tr><td>100</td><td>B系列传统算法</td><td>RANSAC算法 计算机视觉技术算法 概念+原理+实现Python版</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="tab‑c">
+                <h2>补天云视觉C系列 — 网络算法实践</h2>
+                <div class="feature-block">
+                    <h3>产品特点</h3>
+                    <ul class="feature-list">
+                        <li><strong>低成本</strong>：CPU即可运行，降低院校实训平台建设投入，适配课堂批量上机教学。</li>
+                        <li><strong>免依赖</strong>：一体化封装，不需要配置复杂开发运行环境，教师备课、学生课程实践直接使用。</li>
+                        <li><strong>纯软件</strong>：标准化软件产品，聚焦计算机视觉高阶课程实践。</li>
+                    </ul>
+                </div>
+                <div class="practice-system">
+                    <h3>课程实践体系</h3>
+                    <p>C系列包含30个卷积神经网络架构的网络算法，配套概念、原理、实现源码以及运行效果。C系列算法源码为独立重新实现，非算法作者原始实现。</p>
+                    <table class="practice-table">
+                        <thead>
+                            <tr>
+                                <th>编号</th>
+                                <th>实践类型</th>
+                                <th>实践名称</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>图像分类算法</td><td>图像分类算法Xception</td></tr>
+                            <tr><td>2</td><td>图像分类算法</td><td>图像分类算法Vision_Transformer</td></tr>
+                            <tr><td>3</td><td>图像分类算法</td><td>图像分类算法VGGNet</td></tr>
+                            <tr><td>4</td><td>图像分类算法</td><td>图像分类算法Swin_Transformer</td></tr>
+                            <tr><td>5</td><td>图像分类算法</td><td>图像分类算法SENet</td></tr>
+                            <tr><td>6</td><td>图像分类算法</td><td>图像分类算法ResNeXt</td></tr>
+                            <tr><td>7</td><td>图像分类算法</td><td>图像分类算法ResNet</td></tr>
+                            <tr><td>8</td><td>图像分类算法</td><td>图像分类算法RegNet</td></tr>
+                            <tr><td>9</td><td>图像分类算法</td><td>图像分类算法MobileNetV3</td></tr>
+                            <tr><td>10</td><td>图像分类算法</td><td>图像分类算法MobileNetV2</td></tr>
+                            <tr><td>11</td><td>图像分类算法</td><td>图像分类算法MobileNetV1</td></tr>
+                            <tr><td>12</td><td>图像分类算法</td><td>图像分类算法Inception‑ResNet</td></tr>
+                            <tr><td>13</td><td>图像分类算法</td><td>图像分类算法GoogLeNet</td></tr>
+                            <tr><td>14</td><td>图像分类算法</td><td>图像分类算法EfficientNetV2</td></tr>
+                            <tr><td>15</td><td>图像分类算法</td><td>图像分类算法EfficientNet</td></tr>
+                            <tr><td>16</td><td>图像分类算法</td><td>图像分类算法DenseNet</td></tr>
+                            <tr><td>17</td><td>图像分类算法</td><td>图像分类算法DeiT_Transformer</td></tr>
+                            <tr><td>18</td><td>图像分类算法</td><td>图像分类算法ConvNeXt</td></tr>
+                            <tr><td>19</td><td>图像分类算法</td><td>图像分类算法CNN</td></tr>
+                            <tr><td>20</td><td>图像分类算法</td><td>图像分类算法AlexNet</td></tr>
+                            <tr><td>21</td><td>目标检测算法</td><td>目标检测算法SSD</td></tr>
+                            <tr><td>22</td><td>目标检测算法</td><td>目标检测算法RT_DETR</td></tr>
+                            <tr><td>23</td><td>目标检测算法</td><td>目标检测算法RetinaNet</td></tr>
+                            <tr><td>24</td><td>目标检测算法</td><td>目标检测算法PANet</td></tr>
+                            <tr><td>25</td><td>目标检测算法</td><td>目标检测算法GFL</td></tr>
+                            <tr><td>26</td><td>目标检测算法</td><td>目标检测算法FCOS</td></tr>
+                            <tr><td>27</td><td>目标检测算法</td><td>目标检测算法Faster_R‑CNN</td></tr>
+                            <tr><td>28</td><td>目标检测算法</td><td>目标检测算法Fast_R‑CNN</td></tr>
+                            <tr><td>29</td><td>目标检测算法</td><td>目标检测算法EfficientDet</td></tr>
+                            <tr><td>30</td><td>目标检测算法</td><td>目标检测算法CenterNet</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="tab‑contact">
+                <h2>联系我们</h2>
+                <div class="contact-wrap">
+                    <div class="contact-item">
+                        <label>微信公众号：</label>
+                        <span>计算机视觉技术</span>
+                    </div>
+                    <div class="contact-item">
+                        <label>微信视频号：</label>
+                        <span>计算机视觉技术</span>
+                    </div>
+                    <div class="contact-item">
+                        <label>联系邮箱：</label>
+                        <a href="mailto:butianyun_cv@sina.cn">butianyun_cv@sina.cn</a>
+                    </div>
+                    <div class="contact-desc">
+                        <p>欢迎各大中专院校、本科院校了解产品、试用、采购相关商务事项。</p>
                     </div>
                 </div>
-                <div class="reference‑link">
-                    <p>产品详情文档：
-                        <a target="_blank" href="https://blog.csdn.net/cvprofessional/article/details/164227832">A系列产品介绍</a>
-                        ｜
-                        <a target="_blank" href="https://blog.csdn.net/cvprofessional/article/details/166995401">销售政策与定价说明</a>
-                    </p>
-                </div>
-            </section>
+            </div>
         </div>
-
-        <!-- Tab2：B+C系列 补天云计算机视觉 本科院校 -->
-        <div id="tab‑bc">
-            <section class="product‑intro">
-                <h2>补天云计算机视觉｜B系列 + C系列</h2>
-                <div class="target‑customer">适用对象：本科院校</div>
-                <div class="sell‑points">
-                    <h3>产品核心优势</h3>
-                    <ul>
-                        <li><strong>低成本</strong>：基于普通计算机CPU环境运行，降低实验室硬件投入，适配本科院校常规计算机实验室环境。</li>
-                        <li><strong>免依赖</strong>：统一运行环境封装，规避多框架版本冲突，降低课程实施环境搭建工作量。</li>
-                        <li><strong>纯软件方案</strong>：完整课程实践系统，配套完备数据集、模型资源、教学文档，支撑计算机视觉本科课程体系教学落地。</li>
-                    </ul>
-                </div>
-                <div class="system‑scope">
-                    <h3>课程实践体系</h3>
-                    <p>构建面向本科计算机视觉专业课程完整实践体系，包含 <strong>100个传统视觉算法项目 + 30个卷积网络算法项目</strong>，覆盖传统图像处理、特征工程、深度学习卷积网络、模型训练、模型转换部署等本科阶段教学全部核心内容。</p>
-                    <p>项目仓库参考：
-                        <a target="_blank" href="https://github.com/butianyun‑cv/butianyun‑cv‑algorithm‑exercise">butianyun‑cv‑algorithm‑exercise GitHub仓库</a>，定义A/B/C系列完整实践目录体系。
-                    </p>
-                </div>
-            </section>
-        </div>
-
-        <!-- Tab3：联系我们 -->
-        <div id="tab‑contact">
-            <section class="contact‑section">
-                <h2>商务联系与资料获取</h2>
-                <div class="contact‑item">
-                    <label>微信公众号：</label>
-                    <span>计算机视觉技术</span>
-                </div>
-                <div class="contact‑item">
-                    <label>微信视频号：</label>
-                    <span>计算机视觉技术</span>
-                </div>
-                <div class="contact‑item">
-                    <label>商务邮箱：</label>
-                    <a href="mailto:butianyun_cv@sina.com">butianyun_cv@sina.com</a>
-                </div>
-                <div class="contact‑tip">
-                    <p>院校咨询、产品试用申请、采购政策咨询，欢迎通过以上渠道联系我们。</p>
-                </div>
-            </section>
-        </div>
-    </div>
-
-    <!-- 页脚 -->
-    <footer class="site‑footer">
-        <div class="container">
+        <footer class="page-footer">
             <p>© BUTIANYUN.COM 补天云 版权所有</p>
-        </div>
-    </footer>
-</div>
-
-<script src="./index.js"></script>
+        </footer>
+    </div>
+    <script src="./index.js"></script>
+    <script>
+        $(function() {
+            $("#tabs").tabs();
+        });
+    </script>
 </body>
 </html>
