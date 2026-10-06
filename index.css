@@ -1,111 +1,89 @@
-/* index.css 商务浅色调，白底黑字 */
 *{
-    margin:0;
-    padding:0;
-    box‑sizing:border‑box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 body{
-    background‑color:#ffffff;
-    color:#111111;
-    font‑family:"Microsoft Yahei", system‑ui, sans‑serif;
-    line‑height:1.7;
-}
-.page‑wrap{
-    min‑height:100vh;
-    display:flex;
-    flex‑direction:column;
+    background-color: #ffffff;
+    color:#000000;
+    font-family:"Microsoft Yahei",Arial,sans-serif;
+    font-size:15px;
+    line-height:1.7;
 }
 .container{
-    max‑width:1100px;
+    max-width:1100px;
     margin:0 auto;
-    padding:0 20px;
+    padding:30px 20px;
 }
-.site‑header{
-    padding:32px 0 20px;
-    border‑bottom:1px solid #e5e7eb;
-    margin‑bottom:30px;
+.page-header{
+    text-align:center;
+    margin-bottom:32px;
 }
-.site‑title{
-    font‑size:28px;
-    font‑weight:bold;
-    color:#0f172a;
+.page-header h1{
+    font-size:28px;
+    margin-bottom:10px;
+    color:#111111;
 }
-.domain{
-    color:#2563eb;
+.subtitle{
+    font-size:16px;
+    color:#333333;
 }
-.site‑subtitle{
-    font‑size:16px;
-    color:#444444;
-    margin‑top:6px;
+#tabs{
+    border:1px solid #dddddd;
+    padding:24px;
+    border-radius:6px;
 }
-#product‑tabs{
-    flex‑grow:1;
+#tabs h2{
+    font-size:22px;
+    margin-bottom:16px;
+    color:#111;
 }
-#product‑tabs .ui‑tabs‑panel{
-    padding:28px 8px;
+#tabs h3{
+    font-size:18px;
+    margin:20px 0 12px 0;
+    color:#222;
 }
-.product‑intro h2{
-    font‑size:22px;
-    margin‑bottom:12px;
-    color:#0f172a;
+.feature-block,.practice-system,.doc-link{
+    margin-bottom:24px;
 }
-.target‑customer{
-    font‑size:15px;
-    color:#334155;
-    margin‑bottom:20px;
+.feature-list,.tech-list{
+    padding-left:22px;
 }
-.sell‑points h3,.system‑scope h3{
-    font‑size:18px;
-    margin:24px 0 12px;
+.feature-list li{
+    margin-bottom:8px;
 }
-.sell‑points ul{
-    padding‑left:22px;
+.tech-list li{
+    margin-bottom:6px;
 }
-.sell‑points li{
-    margin‑bottom:10px;
-}
-.module‑list{
-    display:grid;
-    grid‑template‑columns:repeat(auto‑fill, minmax(220px,1fr));
-    gap:10px;
-    margin‑top:14px;
-}
-.module‑item{
-    background‑color:#f7f8fa;
-    border:1px solid #e2e5eb;
-    padding:10px 14px;
-    border‑radius:4px;
-}
-.reference‑link{
-    margin‑top:24px;
-    padding‑top:16px;
-    border‑top:1px solid #eee;
-}
-.contact‑section .contact‑item{
-    margin‑bottom:16px;
-    font‑size:16px;
-}
-.contact‑item label{
-    display:inline‑block;
-    min‑width:140px;
-    font‑weight:500;
-}
-.contact‑tip{
-    margin‑top:24px;
-    color:#444;
+.doc-link p{
+    margin:6px 0;
 }
 a{
-    color:#2563eb;
-    text‑decoration:none;
+    color:#0052cc;
+    text-decoration:none;
 }
 a:hover{
-    text‑decoration:underline;
+    text-decoration:underline;
 }
-.site‑footer{
-    margin‑top:40px;
-    padding:24px 0;
-    border‑top:1px solid #eee;
-    text‑align:center;
-    font‑size:14px;
-    color:#555;
+.contact-wrap{
+    margin-top:16px;
+}
+.contact-item{
+    margin:12px 0;
+    font-size:16px;
+}
+.contact-item label{
+    display:inline-block;
+    min-width:140px;
+    font-weight:bold;
+}
+.contact-desc{
+    margin-top:24px;
+    color:#222;
+}
+.page-footer{
+    margin-top:40px;
+    text-align:center;
+    font-size:14px;
+    color:#444444;
 }
