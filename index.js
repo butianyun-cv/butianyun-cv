@@ -1,18 +1,19 @@
-// index.js jQuery + jQuery‑UI Tabs初始化，增加切换动画效果
 $(function(){
-    //初始化标签页，开启淡入动画
-    $("#product‑tabs").tabs({
+    //初始化jQuery‑UI标签页组件
+    $("#tabs").tabs({
+        active:0,
         show:{
             effect:"fade",
-            duration:400
+            duration:350
         },
         hide:{
             effect:"fade",
-            duration:300
-        },
-        active:0
+            duration:250
+        }
     });
 
-    //页面载入完成简单动画：标题渐入
-    $(".site‑header").hide().fadeIn(600);
+    // 鼠标悬停标签简单高亮
+    $("#tabs > ul > li").hover(function(){
+        $(this).css("cursor","pointer");
+    });
 });
