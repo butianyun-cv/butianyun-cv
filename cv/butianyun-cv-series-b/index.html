@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+    <title>补天云视觉实践 B 系列 - 传统算法实践 - 100个传统算法 - BUTIANYUN.COM</title>
+
+    <meta name="description" content="补天云视觉实践 B 系列：传统计算机视觉算法实践。包含 100 个传统算法，配套概念、原理、实现源码与运行效果。核心算法使用 Python API 从零实现，图像读写使用 OpenCV API，覆盖图像滤波、增强、形态学、几何变换、特征提取、边缘检测、阈值分割、目标检测、目标跟踪等方向。">
+    <meta name="keywords" content="补天云,补天云视觉,补天云计算机视觉,补天云视觉实践,B系列,传统算法,计算机视觉传统算法,OpenCV,Python,图像滤波,图像增强,形态学,几何变换,特征提取,边缘检测,阈值分割,目标检测,目标跟踪,图像配准,光流法,卡尔曼滤波,粒子滤波,均值漂移,谱聚类,SLIC超像素">
+    <meta name="author" content="补天云">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="CN">
+    <meta name="language" content="zh-CN">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="补天云视觉实践 B 系列 - 传统算法实践 100 个">
+    <meta property="og:description" content="B 系列：100 个传统计算机视觉算法实践。">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="补天云">
+
+    <link rel="canonical" href="https://butianyun.com/cv/butianyun-cv-series-b/">
+    <link rel="icon" type="image/png" href="../../favicon.png">
+    <link rel="stylesheet" href="../../theme/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../theme/butianyun.css">
+</head>
+<body>
+
+<div data-site-header></div>
+<div data-site-breadcrumb></div>
+
+<main class="site-main">
+    <div class="site-container">
+        <section class="content">
+            <h1 class="page-title">补天云视觉实践 B 系列 — 传统算法实践</h1>
+            <p class="page-subtitle">100 个传统计算机视觉算法 · 概念 + 原理 + 实现源码 + 运行效果</p>
+
+            <p class="lead">
+                B 系列包含 <strong>100 个传统计算机视觉算法</strong>的实践内容，每个算法配套"概念 + 原理 + 实现源码 + 运行效果"。
+                核心算法使用 Python API 从零实现，图像读写等操作使用 OpenCV API。
+                适用于学习计算机视觉经典方法、打牢算法基础、辅助理解 A 系列应用实践与 C 系列网络算法。
+            </p>
+
+            <section class="section">
+                <h2 class="section-title">B 系列算法分类</h2>
+
+                <h3>图像滤波 / 去噪</h3>
+                <p>均值滤波、高斯滤波、中值滤波、双边滤波；高斯噪声去除、椒盐噪声去除、脉冲噪声去除、引导滤波等。</p>
+
+                <h3>灰度变换 / 图像增强</h3>
+                <p>直方图均衡化、自适应直方图均衡化、CLAHE、伽马校正、对数变换、线性变换、直方图匹配、同态滤波、多尺度 Retinex 等。</p>
+
+                <h3>形态学操作</h3>
+                <p>膨胀、腐蚀、开运算、闭运算、顶帽变换、骨架提取等。</p>
+
+                <h3>几何变换</h3>
+                <p>图像旋转、缩放、裁剪、镜像翻转、图像金字塔等。</p>
+
+                <h3>特征点检测 / 描述</h3>
+                <p>FAST、Harris、Shi-Tomasi 角点检测；SIFT、SURF、ORB、BRISK、BRIEF、FREAK 特征提取与描述等。</p>
+
+                <h3>边缘检测</h3>
+                <p>Prewitt、Roberts、Canny、Sobel、Laplacian、LOG 等。</p>
+
+                <h3>特征提取</h3>
+                <p>DCT、HOG、LBP、CSLBP、密集特征、傅里叶变换、Gabor 滤波器、局部相位量化、PCA 等。</p>
+
+                <h3>图像分割</h3>
+                <p>全局 / 迭代 / OTSU 阈值分割、区域生长、区域分裂合并、分水岭、活动轮廓、水平集、GVF 轮廓、K-Means、模糊 C 均值、谱聚类、均值漂移、马尔可夫随机场、条件随机场、SLIC 超像素、图割、实例分割掩码生成等。</p>
+
+                <h3>目标检测 / 跟踪</h3>
+                <p>滑动窗口、积分图、级联分类器检测；IoU 计算、NMS、卡尔曼滤波、粒子滤波、均值漂移、CAMShift、相关滤波、KCF、DCF 跟踪；匈牙利匹配、余弦距离匹配多目标跟踪；光流法跟踪、RANSAC 等。</p>
+
+                <h3>其他</h3>
+                <p>暗通道先验去雾、色彩量化、颜色空间转换、MSER、选择性搜索、图像配准（基于特征 / 基于区域）、线段检测 LSD 等。</p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">B 系列特点</h2>
+                <ul>
+                    <li><strong>100 个传统算法</strong>：覆盖计算机视觉经典方法的完整谱系。</li>
+                    <li><strong>从零实现</strong>：核心算法通过 Python API 从零实现，便于学习算法本质。</li>
+                    <li><strong>OpenCV 辅助</strong>：图像读写等基础操作使用 OpenCV API，提高效率。</li>
+                    <li><strong>概念 + 原理 + 源码 + 效果</strong>：四要素完整呈现，便于教学与自学。</li>
+                </ul>
+            </section>
+        </section>
+    </div>
+<div data-site-footer></div>
+</main><script src="../../theme/butianyun-nav.js"></script>
+<script src="../../theme/jquery.min.js"></script>
+<script src="../../theme/jquery-ui.min.js"></script>
+</body>
+</html>
