@@ -96,7 +96,7 @@
             +   '<div class="site-header-inner">'
             +     '<a class="site-brand" href="' + homeHref + '" aria-label="补天云 主页">'
             +       '<img class="site-brand-logo" src="' + logoSrc + '" alt="补天云">'
-            +       '<span class="site-brand-name">补天云 <span class="site-tagline">补天云视觉实践 / 补天云QT视频课程 / 补天云其它软件产品</span></span>'
+            +       '<span class="site-brand-name">补天云 <span class="site-tagline">补天云视觉实践 / 补天云QT视频课程 / 补天云软件产品</span></span>'
             +     '</a>'
             +   '</div>'
             +   '<nav class="main-nav" aria-label="主导航">'
