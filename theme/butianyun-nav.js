@@ -1,17 +1,9 @@
 /* ==========================================================================
- * 补天云网站 - 共享导航/页头/页脚/面包屑组件
- * 使用方式：HTML 页面提供占位符
- *   <div data-site-header></div>
- *   <div data-site-breadcrumb></div>
- *   <div data-site-footer></div>
- * 该脚本将自动根据页面路径与 data-* 属性注入内容：
- *   - data-page-title : 当前页标题
- *   - data-breadcrumb : 可选；用 > 分隔面包屑节点，"node /path" 表示带链接，纯 label 表示仅文本
+ * 补天云网站
  * ========================================================================== */
 (function (global) {
     'use strict';
 
-    /* ---------- 导航配置（单源真相） ---------- */
     var NAV_ITEMS = [
         { id: 'home', label: '首页', path: 'index.html' },
         {
@@ -21,8 +13,7 @@
             children: [
                 { label: 'A 系列 - 应用实践软件', path: 'cv/butianyun-cv-series-a/index.html' },
                 { label: 'B 系列 - 传统算法软件', path: 'cv/butianyun-cv-series-b/index.html' },
-                { label: 'C 系列 - 网络算法软件', path: 'cv/butianyun-cv-series-c/index.html' },
-                { label: 'A 系列手册（扫描PDF）', path: 'cv/butianyun-cv-series-a/manual/index.html' }
+                { label: 'C 系列 - 网络算法软件', path: 'cv/butianyun-cv-series-c/index.html' }
             ]
         },
         {
@@ -50,36 +41,24 @@
         { id: 'about', label: '联系我们', path: 'about/index.html' }
     ];
 
-    /* ---------- 工具：计算站点根前缀 ----------
-     * 首选方案：通过页面中实际加载成功的 theme/butianyun.css 的绝对 URL 反推站点根。
-     * 只要 CSS 加载成功，推断结果必然正确，不受以下因素影响：
-     *   - 页面 URL 是否带尾斜杠（/cv 还是 /cv/）
-     *   - 服务器是否做 301 目录重定向
-     *   - 站点部署在域名根还是子路径
-     * 回退方案：基于 window.location.pathname 逐段计算相对前缀（../）。
-     */
     function getPathInfo() {
         var pathname = decodeURIComponent(window.location.pathname || '');
 
-        // ---- 首选：从 butianyun.css 的真实 URL 推断站点根 ----
         var cssLinks = document.getElementsByTagName('link');
         for (var i = 0; i < cssLinks.length; i++) {
             var href = cssLinks[i].getAttribute('href') || '';
             if (!/butianyun\.css$/.test(href)) continue;
 
-            // 借助 <a> 元素把相对 href 解析为绝对 URL（由浏览器完成，绝对可靠）
             var probe = document.createElement('a');
             probe.href = href;
-            var cssPath = probe.pathname; // 例如 /theme/butianyun.css
+            var cssPath = probe.pathname;
             var m = cssPath.match(/^(.*\/)theme\/butianyun\.css$/);
             if (!m) break;
 
-            var rootPath = m[1];  // 站点根路径，例如 / 或 /repo/
-            // 用 origin + rootPath 构造完整根 URL（避免 href 带查询串时替换失败）
+            var rootPath = m[1]; 
             var origin = probe.origin || (probe.protocol + '//' + probe.host);
-            var rootUrl = origin + rootPath; // 例如 https://butianyun.com/
+            var rootUrl = origin + rootPath;
 
-            // 计算当前页面相对站点根的路径（用于高亮与面包屑匹配）
             var rel = pathname;
             if (rel.indexOf(rootPath) === 0) rel = rel.substring(rootPath.length);
             rel = rel.replace(/index\.html?$/i, '');
@@ -89,23 +68,15 @@
             return { depth: segs.length, prefix: rootUrl, currentRel: currentRel, absolute: true };
         }
 
-        // ---- 回退：基于 pathname 计算相对前缀 ----
-        // 判断是否为"目录"形式：以 / 结尾，或以 index.html 结尾
         var looksLikeDir = /\/$/.test(pathname) || /index\.html?$/i.test(pathname);
         pathname = pathname.replace(/index\.html?$/i, '');
         var segments = pathname.split('/').filter(function (s) { return s.length > 0; });
-        // 深度 = 页面所在目录的层级数：
-        // - /                          -> []            -> depth 0 -> prefix ''
-        // - /cv/                       -> [cv]          -> depth 1 -> prefix '../'
-        // - /cv/series-a/              -> [cv,series-a] -> depth 2 -> prefix '../../'
         var depth = looksLikeDir ? segments.length : Math.max(0, segments.length - 1);
         var prefix = depth === 0 ? '' : new Array(depth + 1).join('../');
-        // 当前页面相对站点根的路径（与 NAV_ITEMS 中的 path 对齐）：
         var currentRel2 = segments.length ? segments.join('/') + '/index.html' : 'index.html';
         return { depth: depth, prefix: prefix, currentRel: currentRel2, absolute: false };
     }
 
-    /* ---------- 工具：转义 ---------- */
     function escapeHtml(s) {
         return String(s)
             .replace(/&/g, '&amp;')
@@ -115,7 +86,6 @@
             .replace(/'/g, '&#39;');
     }
 
-    /* ---------- 渲染 header ---------- */
     function renderHeader(info) {
         var p = info.prefix;
         var logoSrc = p + 'about/butianyun.com.png';
@@ -137,7 +107,6 @@
             var item = NAV_ITEMS[i];
             var href = p + item.path;
             var isCurrent = item.path === info.currentRel;
-            // 子项包含当前路径时也激活父项
             var isParentOfCurrent = false;
             if (item.children && item.children.length) {
                 for (var c = 0; c < item.children.length; c++) {
@@ -179,17 +148,14 @@
         return html;
     }
 
-    /* ---------- 渲染面包屑 ---------- */
     function renderBreadcrumb(info, pageTitle) {
         var p = info.prefix;
         var explicit = document.body && document.body.getAttribute('data-breadcrumb');
         var segments;
 
         if (explicit) {
-            // 形如 "首页 > 视觉实践产品 > A 系列"
             segments = explicit.split('>').map(function (s) { return s.trim(); }).filter(function (s) { return s.length; });
         } else {
-            // 根据 currentRel 在 NAV_ITEMS/children 中查找路径
             segments = ['首页'];
             var foundItem = null, foundChild = null;
             for (var i = 0; i < NAV_ITEMS.length; i++) {
@@ -233,7 +199,6 @@
         return html;
     }
 
-    /* ---------- 渲染 footer ---------- */
     function renderFooter(info) {
         var p = info.prefix;
         var links = [
@@ -258,7 +223,6 @@
         return html;
     }
 
-    /* ---------- 挂载函数 ---------- */
     function mount() {
         var info = getPathInfo();
         var pageTitle = (document.body && document.body.getAttribute('data-page-title')) || '';
@@ -273,7 +237,6 @@
         if (footerSlot) footerSlot.outerHTML = renderFooter(info);
     }
 
-    // 暴露 API
     global.ButianyunNav = {
         mount: mount,
         NAV_ITEMS: NAV_ITEMS,
