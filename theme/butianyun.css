@@ -290,6 +290,50 @@ hr {
     font-weight: 500;
 }
 
+/* 移动端菜单切换按钮（默认隐藏，小屏显示） */
+.main-nav-toggle {
+    display: none;
+    width: 100%;
+    padding: 12px 20px;
+    background: transparent;
+    border: 0;
+    color: #222;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.main-nav-toggle:hover,
+.main-nav-toggle:focus {
+    background-color: #1a5fb4;
+    color: #fff;
+    outline: none;
+}
+
+/* 子菜单展开按钮（默认隐藏，小屏显示） */
+.main-nav-submenu-toggle {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 48px;
+    border: 0;
+    background: transparent;
+    color: #1a5fb4;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.main-nav-submenu-toggle:hover,
+.main-nav-submenu-toggle:focus {
+    outline: none;
+    background: rgba(26, 95, 180, 0.08);
+}
+
 /* 面包屑 */
 .breadcrumb {
     background: #f8f8f8;
@@ -632,7 +676,7 @@ hr {
 }
 
 /* ==========================================================================
-   适配：平板
+   适配：平板（900px 以下启用折叠菜单）
    ========================================================================== */
 @media (max-width: 900px) {
     .site-header-inner {
@@ -647,28 +691,65 @@ hr {
         font-size: 0.8rem;
     }
 
+    /* 显示"菜单"按钮，导航列表默认收起 */
+    .main-nav-toggle {
+        display: block;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
     .main-nav-list {
-        flex-wrap: wrap;
+        display: none;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .main-nav.is-open .main-nav-list {
+        display: flex;
     }
 
     .main-nav-item {
-        flex: 1 1 50%;
+        flex: 1 1 100%;
         min-width: 0;
+        position: relative;
     }
 
     .main-nav-link {
-        border-right: 1px solid #e5e5e5;
+        border-right: 0;
         border-bottom: 1px solid #e5e5e5;
         padding: 12px 8px;
         font-size: 0.95rem;
+        text-align: left;
+        padding-right: 56px;
     }
 
+    /* 子菜单展开按钮（点击展开，不依赖 hover） */
+    .main-nav-submenu-toggle {
+        display: block;
+    }
+
+    .main-nav-item.submenu-open .main-nav-submenu-toggle {
+        transform: rotate(180deg);
+    }
+
+    /* 子菜单：内嵌展开，随父项缩进 */
     .main-nav-submenu {
         position: static;
         box-shadow: none;
         border: 0;
         border-bottom: 1px solid #e5e5e5;
-        padding: 4px 0 4px 14px;
+        padding: 0 0 4px 16px;
+        background: #fafafa;
+        display: none;
+    }
+
+    .main-nav-item.submenu-open .main-nav-submenu {
+        display: block;
+    }
+
+    .main-nav-sublink {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+        border-bottom: 1px dashed #e5e5e5;
     }
 }
 
@@ -695,19 +776,20 @@ hr {
         padding-right: 14px;
     }
 
-    .main-nav-list {
-        flex-direction: column;
-    }
-
-    .main-nav-item {
-        flex: 1 1 100%;
+    .main-nav-toggle {
+        padding: 11px 14px;
+        font-size: 0.95rem;
     }
 
     .main-nav-link {
-        border-right: 0;
-        border-bottom: 1px solid #e5e5e5;
-        text-align: left;
-        padding: 12px 14px;
+        padding: 11px 14px;
+        padding-right: 56px;
+        font-size: 0.95rem;
+    }
+
+    .main-nav-sublink {
+        font-size: 0.85rem;
+        padding: 9px 10px;
     }
 
     .card-grid {

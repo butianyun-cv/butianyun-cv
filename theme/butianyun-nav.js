@@ -101,7 +101,8 @@
             +   '</div>'
             +   '<nav class="main-nav" aria-label="主导航">'
             +     '<div class="main-nav-inner">'
-            +       '<ul class="main-nav-list">';
+            +       '<button type="button" class="main-nav-toggle" aria-expanded="false" aria-controls="main-nav-list">☰ 菜单</button>'
+            +       '<ul class="main-nav-list" id="main-nav-list">';
 
         for (var i = 0; i < NAV_ITEMS.length; i++) {
             var item = NAV_ITEMS[i];
@@ -126,7 +127,8 @@
                 +   '<a class="main-nav-link' + activeClass + '" href="' + href + '">' + escapeHtml(item.label) + '</a>';
 
             if (hasChildren) {
-                html += '<ul class="main-nav-submenu">';
+                html += '<button type="button" class="main-nav-submenu-toggle" aria-expanded="false" aria-label="展开' + escapeHtml(item.label) + '子菜单">▾</button>'
+                      + '<ul class="main-nav-submenu">';
                 for (var k = 0; k < item.children.length; k++) {
                     var child = item.children[k];
                     var childHref = p + child.path;
@@ -223,6 +225,35 @@
         return html;
     }
 
+    /* ---------- 事件绑定：移动端菜单展开/收起 ---------- */
+    function bindNavEvents() {
+        var nav = document.querySelector('.main-nav');
+        if (!nav) return;
+
+        // 主菜单展开/收起
+        var toggle = nav.querySelector('.main-nav-toggle');
+        if (toggle) {
+            toggle.addEventListener('click', function () {
+                var isOpen = nav.classList.toggle('is-open');
+                toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+        }
+
+        // 子菜单展开/收起（仅带子菜单的项）
+        var subToggles = nav.querySelectorAll('.main-nav-submenu-toggle');
+        for (var i = 0; i < subToggles.length; i++) {
+            (function (btn) {
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    var li = btn.parentNode;
+                    var isOpen = li.classList.toggle('submenu-open');
+                    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                });
+            })(subToggles[i]);
+        }
+    }
+
     function mount() {
         var info = getPathInfo();
         var pageTitle = (document.body && document.body.getAttribute('data-page-title')) || '';
@@ -235,6 +266,8 @@
 
         var footerSlot = document.querySelector('[data-site-footer]');
         if (footerSlot) footerSlot.outerHTML = renderFooter(info);
+
+        bindNavEvents();
     }
 
     global.ButianyunNav = {
