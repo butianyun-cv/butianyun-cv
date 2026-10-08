@@ -50,17 +50,59 @@
         { id: 'about', label: '联系我们', path: 'about/index.html' }
     ];
 
-    /* ---------- 工具：计算相对路径前缀 ---------- */
+    /* ---------- 工具：计算站点根前缀 ----------
+     * 首选方案：通过页面中实际加载成功的 theme/butianyun.css 的绝对 URL 反推站点根。
+     * 只要 CSS 加载成功，推断结果必然正确，不受以下因素影响：
+     *   - 页面 URL 是否带尾斜杠（/cv 还是 /cv/）
+     *   - 服务器是否做 301 目录重定向
+     *   - 站点部署在域名根还是子路径
+     * 回退方案：基于 window.location.pathname 逐段计算相对前缀（../）。
+     */
     function getPathInfo() {
-        var pathname = window.location.pathname || '';
-        // 去除尾部的 index.html
-        pathname = pathname.replace(/index\.html?$/, '');
+        var pathname = decodeURIComponent(window.location.pathname || '');
+
+        // ---- 首选：从 butianyun.css 的真实 URL 推断站点根 ----
+        var cssLinks = document.getElementsByTagName('link');
+        for (var i = 0; i < cssLinks.length; i++) {
+            var href = cssLinks[i].getAttribute('href') || '';
+            if (!/butianyun\.css$/.test(href)) continue;
+
+            // 借助 <a> 元素把相对 href 解析为绝对 URL（由浏览器完成，绝对可靠）
+            var probe = document.createElement('a');
+            probe.href = href;
+            var cssPath = probe.pathname; // 例如 /theme/butianyun.css
+            var m = cssPath.match(/^(.*\/)theme\/butianyun\.css$/);
+            if (!m) break;
+
+            var rootPath = m[1];  // 站点根路径，例如 / 或 /repo/
+            // 用 origin + rootPath 构造完整根 URL（避免 href 带查询串时替换失败）
+            var origin = probe.origin || (probe.protocol + '//' + probe.host);
+            var rootUrl = origin + rootPath; // 例如 https://butianyun.com/
+
+            // 计算当前页面相对站点根的路径（用于高亮与面包屑匹配）
+            var rel = pathname;
+            if (rel.indexOf(rootPath) === 0) rel = rel.substring(rootPath.length);
+            rel = rel.replace(/index\.html?$/i, '');
+            var segs = rel.split('/').filter(function (s) { return s.length > 0; });
+            var currentRel = segs.length ? segs.join('/') + '/index.html' : 'index.html';
+
+            return { depth: segs.length, prefix: rootUrl, currentRel: currentRel, absolute: true };
+        }
+
+        // ---- 回退：基于 pathname 计算相对前缀 ----
+        // 判断是否为"目录"形式：以 / 结尾，或以 index.html 结尾
+        var looksLikeDir = /\/$/.test(pathname) || /index\.html?$/i.test(pathname);
+        pathname = pathname.replace(/index\.html?$/i, '');
         var segments = pathname.split('/').filter(function (s) { return s.length > 0; });
-        var depth = Math.max(0, segments.length - 1);
+        // 深度 = 页面所在目录的层级数：
+        // - /                          -> []            -> depth 0 -> prefix ''
+        // - /cv/                       -> [cv]          -> depth 1 -> prefix '../'
+        // - /cv/series-a/              -> [cv,series-a] -> depth 2 -> prefix '../../'
+        var depth = looksLikeDir ? segments.length : Math.max(0, segments.length - 1);
         var prefix = depth === 0 ? '' : new Array(depth + 1).join('../');
-        // 当前页面（无前缀）路径，用于高亮判断
-        var currentRel = segments.length ? segments[segments.length - 1] + '/index.html' : 'index.html';
-        return { depth: depth, prefix: prefix, currentRel: currentRel };
+        // 当前页面相对站点根的路径（与 NAV_ITEMS 中的 path 对齐）：
+        var currentRel2 = segments.length ? segments.join('/') + '/index.html' : 'index.html';
+        return { depth: depth, prefix: prefix, currentRel: currentRel2, absolute: false };
     }
 
     /* ---------- 工具：转义 ---------- */
@@ -83,7 +125,7 @@
             + '<header class="site-header">'
             +   '<div class="site-header-inner">'
             +     '<a class="site-brand" href="' + homeHref + '" aria-label="补天云 主页">'
-            +       '<img class="site-brand-logo" src="' + logoSrc + '" alt="补天云 LOGO">'
+            +       '<img class="site-brand-logo" src="' + logoSrc + '" alt="补天云">'
             +       '<span class="site-brand-name">补天云 <span class="site-tagline">补天云视觉实践 / 补天云QT视频课程 / 补天云其它软件产品</span></span>'
             +     '</a>'
             +   '</div>'
