@@ -11,9 +11,9 @@
             label: '视觉实践',
             path: 'cv/index.html',
             children: [
-                { label: 'A 系列 - 应用实践软件', path: 'cv/butianyun-cv-series-a/index.html' },
-                { label: 'B 系列 - 传统算法软件', path: 'cv/butianyun-cv-series-b/index.html' },
-                { label: 'C 系列 - 网络算法软件', path: 'cv/butianyun-cv-series-c/index.html' }
+                { label: 'A系列应用实践', path: 'cv/butianyun-cv-series-a/index.html' },
+                { label: 'B系列传统算法', path: 'cv/butianyun-cv-series-b/index.html' },
+                { label: 'C系列网络算法', path: 'cv/butianyun-cv-series-c/index.html' }
             ]
         },
         {
@@ -21,10 +21,10 @@
             label: '视频课程',
             path: 'course/index.html',
             children: [
-                { label: 'QT5 系列课程', path: 'course/butianyun-qt5-series-course/index.html' },
-                { label: 'QT6 系列课程', path: 'course/butianyun-qt6-series-course/index.html' },
+                { label: 'QT5系列课程', path: 'course/butianyun-qt5-series-course/index.html' },
+                { label: 'QT6系列课程', path: 'course/butianyun-qt6-series-course/index.html' },
                 { label: '网络编程系列课程', path: 'course/butianyun-network-series-course/index.html' },
-                { label: '计算机视觉系列课程', path: 'course/butianyun-cv-series-course/index.html' }
+                { label: '视觉实战系列课程', path: 'course/butianyun-cv-series-course/index.html' }
             ]
         },
         {
@@ -101,7 +101,7 @@
             +   '</div>'
             +   '<nav class="main-nav" aria-label="主导航">'
             +     '<div class="main-nav-inner">'
-            +       '<button type="button" class="main-nav-toggle" aria-expanded="false" aria-controls="main-nav-list">☰ 菜单</button>'
+            +       '<button type="button" class="main-nav-toggle" aria-expanded="false" aria-controls="main-nav-list">☰</button>'
             +       '<ul class="main-nav-list" id="main-nav-list">';
 
         for (var i = 0; i < NAV_ITEMS.length; i++) {
@@ -127,7 +127,7 @@
                 +   '<a class="main-nav-link' + activeClass + '" href="' + href + '">' + escapeHtml(item.label) + '</a>';
 
             if (hasChildren) {
-                html += '<button type="button" class="main-nav-submenu-toggle" aria-expanded="false" aria-label="展开' + escapeHtml(item.label) + '子菜单">▾</button>'
+                html += '<button type="button" class="main-nav-submenu-toggle" aria-expanded="false" aria-label="展开' + escapeHtml(item.label) + '">▾</button>'
                       + '<ul class="main-nav-submenu">';
                 for (var k = 0; k < item.children.length; k++) {
                     var child = item.children[k];
