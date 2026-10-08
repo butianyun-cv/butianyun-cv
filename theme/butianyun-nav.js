@@ -8,7 +8,7 @@
         { id: 'home', label: '首页', path: 'index.html' },
         {
             id: 'cv',
-            label: '视觉实践产品',
+            label: '视觉实践',
             path: 'cv/index.html',
             children: [
                 { label: 'A 系列 - 应用实践软件', path: 'cv/butianyun-cv-series-a/index.html' },
@@ -203,7 +203,7 @@
         var p = info.prefix;
         var links = [
             { label: '首页', path: 'index.html' },
-            { label: '视觉实践产品', path: 'cv/index.html' },
+            { label: '视觉实践', path: 'cv/index.html' },
             { label: '视频课程', path: 'course/index.html' },
             { label: '软件产品', path: 'product/index.html' },
             { label: '联系我们', path: 'about/index.html' }
