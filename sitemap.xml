@@ -823,4 +823,19 @@
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
     </url>
+
+    <url>
+      <loc>https://butianyun.com/cv/butianyun_cv_series_weixin.html</loc>
+      <lastmod>2026-10-21T16:34:29.730Z</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>https://butianyun.com/cv/butianyun_cv_principles_weixin.html</loc>
+      <lastmod>2026-10-21T16:34:29.730Z</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
 </urlset>
