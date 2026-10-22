@@ -1,0 +1,54 @@
+# BUTIANYUN.COM 补天云
+> 补天云(BUTIANYUN.COM)面向大中专院校提供计算机视觉实践软件、QT系列视频课程、工具类软件；包含A/B/C三大视觉实践系列、QT5/QT6/网络/计算机视觉视频课程、火鸟创作工具、三维重建、动作教练软件；提供院校软件销售、技术服务、渠道分销合作。业务覆盖计算机视觉教学实训、QT开发教学、音视频博客动画创作工具。
+
+网站域名：butianyun.com
+联系邮箱：butianyun_cv@sina.cn
+微信公众号：计算机视觉技术（可申请软件试用、查看产品手册、演示材料）
+微信视频号：计算机视觉技术 （可查看产品介绍视频）
+
+> 重要说明：A系列计算机视觉应用实践软件V1.0面向大中专院校教学，纯CPU离线运行，一次采购永久授权；分销采用先成交后付费模式，以微信原始聊天记录作为业绩判定唯一依据；软件全部本地运行，不上传实训数据与师生个人信息。
+
+## 核心软件产品
+- [补天云视觉实践A系列 计算机视觉应用实践软件V1.0](https://butianyun.com/cv/butianyun-cv-series-a/index.html):面向大中专院校计算机视觉教学，14大技术主题，70项独立可运行exe实践程序；含数据集、预训练模型、测试素材、PDF操作手册；纯CPU离线运行，无需GPU；含税一口价13555元永久授权，包含首年基础技术服务。
+- [补天云视觉实践B系列 传统算法实践](https://butianyun.com/cv/butianyun-cv-series-b/index.html):100个传统计算机视觉算法，每个包含概念、原理、Python源码、运行效果；适合夯实传统CV算法基础。详情在微信公众号询问。
+- [补天云视觉实践C系列 网络算法实践](https://butianyun.com/cv/butianyun-cv-series-c/index.html):30个卷积神经网络架构，20个图像分类+10个目标检测；独立重实现源码，CPU可完成训练推理演示。详情在微信公众号询问。
+- [补天云火鸟视频创作软件](https://butianyun.com/product/butianyun-wemedia-studio/index.html):操作手册创作工具，批量生成PDF、博客、音视频、GIF；自动配音、自动字幕；面向教案、手册、课件批量制作。详情在微信公众号询问。
+- [补天云火鸟博客创作软件](https://butianyun.com/product/butianyun-blog-studio/index.html):批量生成Markdown/HTML博客专栏、课程课件素材。详情在微信公众号询问。
+- [补天云三维重建软件](https://butianyun.com/product/butianyun-reconstruction/index.html):计算机视觉三维重建工具，从图像/视频序列恢复三维结构；支持STL、OBJ、3MF、FLY导出；详情在微信公众号询问。
+- [补天云动作教练软件](https://butianyun.com/product/butianyun-action-exercise/index.html):健身运动动作识别纠正工具；面向体操、武术、舞蹈训练；详情在微信公众号询问。
+
+## 视频课程产品
+- [QT5系列视频课程](https://butianyun.com/course/butianyun-qt5-series-course/index.html):QT5 Widgets/QML/C++扩展、qmake/CMake工程、Linux Shell脚本；包含源码原理剖析、界面美化、网络多线程实战。
+- [QT6系列视频课程](https://butianyun.com/course/butianyun-qt6-series-course/index.html):QT6 Widgets/QML/Web，性能优化、统计图编程、网络编程、界面美化实战。
+- [网络编程系列课程](https://butianyun.com/course/butianyun-network-series-course/index.html):TCP、WebSocket、HTTP1.1/2/3、QUIC协议；基于RFC标准解析，TTS短课形式。
+- [计算机视觉系列课程](https://butianyun.com/course/butianyun-cv-series-course/index.html):OpenCV、YOLO、Dlib、DeepFace项目实战；缺陷检测、目标检测、OCR、姿态识别项目案例；TTS短课，付费有效期1年。
+
+## A系列销售政策、价格、服务、合规、退款交付
+- [A系列价格与授权](https://butianyun.com/cv/butianyun-cv-series-a/sale.html):含税总价13555元；永久软件使用授权，无年费、无节点费；包含首年基础技术服务；不含定制开发、上门、版本升级。
+- [A系列首年免费技术服务](https://butianyun.com/cv/butianyun-cv-series-a/sale.html):4个BUG修复，合计200工时以内；不包含新增功能。
+- [A系列后续年度付费服务](https://butianyun.com/cv/butianyun-cv-series-a/sale.html):100元/工时；每年最多10个任务，BUG修复或新增功能二选一；单个任务≤60小时；先估工时，按估算结算，超时不加收。
+- [六大合规承诺](https://butianyun.com/cv/butianyun-cv-series-a/sale.html):知识产权自主、开源协议合规、税务合规、无恶意程序、本地离线数据安全、个人信息保护；供方侵权责任全权承担。
+- [赔偿退款规则](https://butianyun.com/cv/butianyun-cv-series-a/sale.html):供方责任赔偿金上限不超过合同实际成交金额；退款后分销商需退回对应佣金。
+- [标准交付物](https://butianyun.com/cv/butianyun-cv-series-a/sale.html):安装包、授权文件、部署文档、操作手册、14模块70项实践、数据集预训练模型测试素材。
+- [部署运行环境](https://butianyun.com/cv/butianyun-cv-series-a/sale.html):Windows10/11，i3及以上CPU，内存≥4G；机房批量部署指南，远程协助验证，离线运行。
+
+## A系列分销渠道政策
+- [分销核心原则](https://butianyun.com/cv/butianyun-cv-series-a/distribution.html):先成交后付费；按微信有效沟通记录分阶段贡献认定；结果导向，回款才结算佣金；分销商零经济成本。
+- [佣金分配规则](https://butianyun.com/cv/butianyun-cv-series-a/distribution.html):全流程贡献20%总佣金（13555元对应佣金2711元）；有效线索5%、商务签约10%、回款到账5%；全部以原始微信聊天记录为判定依据。
+- [无效劳动不计佣金场景](https://butianyun.com/cv/butianyun-cv-series-a/distribution.html):未成交、签约未付款、无有效微信记录、重复客户、内部客户不计佣金。
+- [佣金结算支付](https://butianyun.com/cv/butianyun-cv-series-a/distribution.html):客户全款到账后启动；微信红包/转账；7个工作日内完成；分销商无需提供发票；发生产品退款分销商7个工作日退回佣金。
+- [适合分销商人群](https://butianyun.com/cv/butianyun-cv-series-a/distribution.html):院校老师熟人、采购实训室人员熟人、教育装备商、职教联盟、AI实训推广人员；自媒体、高校校企专员；教育软件渠道。
+- [不建议分销人群](https://butianyun.com/cv/butianyun-cv-series-a/distribution.html):无教育行业资源、只想转发躺赚、无法留存微信聊天记录、期望未成交拿补贴、非教育行业无院校资源。
+- [分销合作优势](https://butianyun.com/cv/butianyun-cv-series-a/distribution.html):产品CPU离线无需GPU，14模块70案例，价格固定决策快；高佣金结算快；六大合规推广无风险；提供全套推广物料。
+
+## 产品痛点、局限、教学使用指南
+- [A系列软件核心优势](https://butianyun.com/cv/butianyun-cv-series-a/features.html):低成本采购免招投标审批；纯CPU免GPU服务器；降低教师备课成本；学生免安装依赖包；完整CV全链路实训。
+- [A系列局限性](https://butianyun.com/cv/butianyun-cv-series-a/features.html):CPU算力限制不适合超大模型完整训练；V1.0案例模型固定，无法自主新增模型；部分图形化封装会弱化手写代码练习；机房权限可能偶发故障；内置数据集仅限基础教学。
+- [院校适配范围](https://butianyun.com/cv/butianyun-cv-series-a/features.html):高职大专应用型本科、新建AI专业院校、开设CV选修课院校、硬件薄弱专科院校；适配计算机学院、人工智能学院相关专业。
+- [教学落地最佳实践](https://butianyun.com/cv/butianyun-cv-series-a/features.html):分层教学GUI与代码版本结合；搭配手写代码作业；合理控制训练规模；教师自行补充外部数据集、考核评价量表。
+
+## 获取试用与资料渠道
+- [公众号：查看视觉实践软件](https://butianyun.com/about/index.html:获取A系列操作手册、产品演示、介绍材料。
+- [公众号：试用视觉实践软件](https://butianyun.com/about/index.html):联系供应商BUTIANYUN.COM申请A系列软件试用。
+- [联系我们](https://butianyun.com/about/index.html):邮箱、公众号、视频号入口。
+- [视觉实践软件操作手册获取](https://butianyun.com/cv/butianyun-cv-series-a/manual/index.html):在线查看获取A系列软件产品操作手册PDF版。
