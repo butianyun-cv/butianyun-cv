@@ -838,4 +838,44 @@
       <priority>0.8</priority>
     </url>
 
+  
+    <url>
+      <loc>https://butianyun.com/cv/butianyun-cv-series-a/features.html</loc>
+      <lastmod>2026-10-22T16:34:29.730Z</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+  
+    <url>
+      <loc>https://butianyun.com/cv/butianyun-cv-series-a/sale.html</loc>
+      <lastmod>2026-10-22T16:34:29.730Z</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+
+    <url>
+      <loc>https://butianyun.com/cv/butianyun-cv-series-a/distribution.html</loc>
+      <lastmod>2026-10-22T16:34:29.730Z</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+  
+    <url>
+      <loc>https://butianyun.com/cv/butianyun-cv-series-a/faq.html</loc>
+      <lastmod>2026-10-22T16:34:29.730Z</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
+
+    <url>
+      <loc>https://butianyun.com/llms.txt</loc>
+      <lastmod>2026-10-22T16:34:29.730Z</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+
 </urlset>
