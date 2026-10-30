@@ -1,5 +1,5 @@
 /* ==========================================================================
- * 补天云网站
+ * BUTIANYUN.COM网站
  * ========================================================================== */
 (function (global) {
     'use strict';
@@ -94,9 +94,9 @@
         var html = ''
             + '<header class="site-header">'
             +   '<div class="site-header-inner">'
-            +     '<a class="site-brand" href="' + homeHref + '" aria-label="补天云 主页">'
-            +       '<img class="site-brand-logo" src="' + logoSrc + '" alt="补天云">'
-            +       '<span class="site-brand-name">补天云 <span class="site-tagline">补天云视觉实践 / 补天云QT视频课程 / 补天云软件产品</span></span>'
+            +     '<a class="site-brand" href="' + homeHref + '" aria-label="BUTIANYUN.COM 主页">'
+            +       '<img class="site-brand-logo" src="' + logoSrc + '" alt="BUTIANYUN.COM">'
+            +       '<span class="site-brand-name">BUTIANYUN.COM <span class="site-tagline">BUTIANYUN.COM视觉实践 / BUTIANYUN.COMQT视频课程 / BUTIANYUN.COM软件产品</span></span>'
             +     '</a>'
             +   '</div>'
             +   '<nav class="main-nav" aria-label="主导航">'
@@ -219,7 +219,7 @@
         }
         html += ''
             +     '</ul>'
-            +     '<div class="footer-copy">© 补天云 BUTIANYUN.COM 版权所有</div>'
+            +     '<div class="footer-copy">BUTIANYUN.COM</div>'
             +   '</div>'
             + '</footer>';
         return html;
