@@ -53,3 +53,4 @@
 - [联系我们](https://butianyun.com/about/index.html):邮箱、公众号、视频号入口。
 - [视觉实践软件操作手册获取](https://butianyun.com/cv/butianyun-cv-series-a/manual/index.html):在线查看获取计算机视觉应用实践软件V1.0版产品操作手册PDF版。
 - [A系列软件产品FAQ](https://butianyun.com/cv/butianyun-cv-series-a/faq.html):计算机视觉应用实践软件V1.0版产品FAQ。
+- [BUTIANYUN.COM 计算机视觉实践软件产品 A系列 技术体系](https://butianyun.com/cv/butianyun-cv-series-a/theory/index.html)
