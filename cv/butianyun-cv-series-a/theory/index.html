@@ -48,8 +48,10 @@ h2 + h3 { page-break-before: avoid; }
 </style>
 </head>
 <body>
-<h1>BUTIANYUN.COM计算机视觉实践软件产品 A系列 技术体系</h1>
+<a name="butianyun_blog_top">
+    <h1>BUTIANYUN.COM计算机视觉实践软件产品 A系列 技术体系</h1>
 
+<a href="#butianyun_blog_catalog">@@@</a>
 
 <p>
 <ul>
@@ -68,33 +70,43 @@ h2 + h3 { page-break-before: avoid; }
 </ul>
 </p>
 
-<h2>目录</h2>
-<p><strong>第一部分　技术主题（14 个）</strong></p>
-<p>01　图像处理　（主要框架：OpenCV）</p>
-<p>02　图像分类　（主要框架：PyTorch、SCRATCH）</p>
-<p>03　目标检测　（主要框架：YOLO、PyTorch）</p>
-<p>04　图像分割　（主要框架：YOLO）</p>
-<p>05　姿态检测　（主要框架：YOLO）</p>
-<p>06　面部识别　（主要框架：OpenCV_HAAR、OpenCV_DNN、DEEPFACE）</p>
-<p>07　目标跟踪　（主要框架：YOLO）</p>
-<p>08　手势识别　（主要框架：OpenCV、YOLO、CNN）</p>
-<p>09　可视化　（主要框架：YOLO、PyTorch、ONNX）</p>
-<p>10　数据标注　（主要框架：YOLO）</p>
-<p>11　数据增强　（主要框架：PyTorch）</p>
-<p>12　数据处理　（主要框架：MNIST、VOC）</p>
-<p>13　网络训练　（主要框架：YOLO、PyTorch）</p>
-<p>14　模型部署　（主要框架：ONNX、OpenVINO；Python、C++）</p>
-<p><strong>第二部分　开源框架（8 个）</strong></p>
-<p>01　OpenCV</p>
-<p>02　PyTorch</p>
-<p>03　Ultralytics YOLO</p>
-<p>04　dlib</p>
-<p>05　DeepFace</p>
-<p>06　ONNX</p>
-<p>07　ONNX Runtime</p>
-<p>08　OpenVINO</p>
+<p>微信公众号：<strong>计算机视觉技术</strong>
+微信视频号：<strong>计算机视觉技术</strong>
+网站：<strong>BUTIANYUN.COM</strong></p>
+<p>微信公众号有400+篇<strong>计算机视觉技术</strong>经典前沿技术博客，包括YOLO、DETR、ViT、CLIP、SAM、DINO、PointNet、SLAM、3DGS。</p>
 <hr />
+
+
+<a name="butianyun_blog_catalog">
+<h2>目录索引</h2>
+<p><strong><a href="#technology_subject">技术主题</a></strong></p>
+<p><a href="#subject_image_process">01　图像处理　（OpenCV）</a></p>
+<p><a href="#subject_image_classify">02　图像分类　（PyTorch、SCRATCH）</a></p>
+<p><a href="#subject_object_detection">03　目标检测　（YOLO、PyTorch）</a></p>
+<p><a href="#subject_image_segmentation">04　图像分割　（YOLO）</a></p>
+<p><a href="#subject_pose_detection">05　姿态检测　（YOLO）</a></p>
+<p><a href="#subject_face_detection">06　面部识别　（OpenCV_HAAR、OpenCV_DNN、DEEPFACE）</a></p>
+<p><a href="#subject_object_track">07　目标跟踪　（YOLO）</a></p>
+<p><a href="#subject_hand_detection">08　手势识别　（OpenCV、YOLO、CNN）</a></p>
+<p><a href="#subject_visualization">09　可视化　（YOLO、PyTorch、ONNX）</a></p>
+<p><a href="#subject_data_label">10　数据标注　（YOLO）</a></p>
+<p><a href="#subject_data_augumentation">11　数据增强　（PyTorch）</a></p>
+<p><a href="#subject_data_process">12　数据处理　（MNIST、VOC）</a></p>
+<p><a href="#subject_network_trainning">13　网络训练　（YOLO、PyTorch）</a></p>
+<p><a href="#subject_model_deploy">14　模型部署　（ONNX、OpenVINO；Python、C++）</a></p>
+<p><strong><a href="#opensource">开源框架</a></strong></p>
+<p><a href="#opensource_opencv">01　OpenCV</a></p>
+<p><a href="#opensource_pytorch">02　PyTorch</a></p>
+<p><a href="#opensource_yolo">03　Ultralytics YOLO</a></p>
+<p><a href="#opensource_dlib"04　dlib</a></p>
+<p><a href="#opensource_deepface">05　DeepFace</a></p>
+<p><a href="#opensource_onnx">06　ONNX</a></p>
+<p><a href="#opensource_onnx_runtime">07　ONNX Runtime</a></p>
+<p><a href="#opensource_openvino">08　OpenVINO</a></p>
+<hr />
+<a name="technology_subject"><a href="#butianyun_blog_top">^^^</a><br />
 <h1>技术主题</h1>
+<a name="subject_image_process"><a href="#butianyun_blog_top">^^^</a><br />
 <h2>图像处理</h2>
 <h3>数字图像与色彩空间</h3>
 <h4>定义作用</h4>
@@ -303,6 +315,7 @@ H, mask = cv2.findHomography(src, dst, cv2.RANSAC, 5.0)
 网站：<strong>BUTIANYUN.COM</strong></p>
 <p>微信公众号有400+篇<strong>计算机视觉技术</strong>经典前沿技术博客，包括YOLO、DETR、ViT、CLIP、SAM、DINO、PointNet、SLAM、3DGS。</p>
 <hr />
+<a name="subject_image_classify"><a href="#butianyun_blog_top">^^^</a><br />
 <h2>图像分类</h2>
 <h3>图像分类任务</h3>
 <h4>定义作用</h4>
@@ -542,6 +555,7 @@ for epoch in range(10):
 网站：<strong>BUTIANYUN.COM</strong></p>
 <p>微信公众号有400+篇<strong>计算机视觉技术</strong>经典前沿技术博客，包括YOLO、DETR、ViT、CLIP、SAM、DINO、PointNet、SLAM、3DGS。</p>
 <hr />
+<a name="subject_object_detection"><a href="#butianyun_blog_top">^^^</a><br />
 <h2>目标检测</h2>
 <h3>边界框与锚框</h3>
 <h4>定义作用</h4>
@@ -755,6 +769,7 @@ print(boxes[keep])          # 前两个框高度重叠，只保留分数最高�
 网站：<strong>BUTIANYUN.COM</strong></p>
 <p>微信公众号有400+篇<strong>计算机视觉技术</strong>经典前沿技术博客，包括YOLO、DETR、ViT、CLIP、SAM、DINO、PointNet、SLAM、3DGS。</p>
 <hr />
+<a name="subject_image_segmentation"><a href="#butianyun_blog_top">^^^</a><br />
 <h2>图像分割</h2>
 <h3>语义分割</h3>
 <h4>定义作用</h4>
@@ -973,6 +988,7 @@ cv2.drawContours(img, cnts, -1, (0, 255, 0), 2)       # 在原图上画出掩码
 网站：<strong>BUTIANYUN.COM</strong></p>
 <p>微信公众号有400+篇<strong>计算机视觉技术</strong>经典前沿技术博客，包括YOLO、DETR、ViT、CLIP、SAM、DINO、PointNet、SLAM、3DGS。</p>
 <hr />
+<a name="subject_pose_detection"><a href="#butianyun_blog_top">^^^</a><br />
 <h2>姿态检测</h2>
 <h3>人体关键点</h3>
 <h4>定义作用</h4>
@@ -1193,6 +1209,7 @@ print(&quot;肘部状态：&quot;, &quot;屈曲&quot; if angle &lt; 90 else &quo
 网站：<strong>BUTIANYUN.COM</strong></p>
 <p>微信公众号有400+篇<strong>计算机视觉技术</strong>经典前沿技术博客，包括YOLO、DETR、ViT、CLIP、SAM、DINO、PointNet、SLAM、3DGS。</p>
 <hr />
+<a name="subject_face_detection"><a href="#butianyun_blog_top">^^^</a><br />
 <h2>面部识别</h2>
 <h3>人脸检测</h3>
 <h4>定义作用</h4>
@@ -1472,6 +1489,7 @@ print(&quot;族裔：&quot;, info[&quot;dominant_race&quot;])
 网站：<strong>BUTIANYUN.COM</strong></p>
 <p>微信公众号有400+篇<strong>计算机视觉技术</strong>经典前沿技术博客，包括YOLO、DETR、ViT、CLIP、SAM、DINO、PointNet、SLAM、3DGS。</p>
 <hr />
+<a name="subject_object_track"><a href="#butianyun_blog_top">^^^</a><br />
 <h2>目标跟踪</h2>
 <h3>目标跟踪任务</h3>
 <h4>定义作用</h4>
@@ -1673,6 +1691,7 @@ for r, c in zip(rows, cols):
 网站：<strong>BUTIANYUN.COM</strong></p>
 <p>微信公众号有400+篇<strong>计算机视觉技术</strong>经典前沿技术博客，包括YOLO、DETR、ViT、CLIP、SAM、DINO、PointNet、SLAM、3DGS。</p>
 <hr />
+<a name="subject_hand_detection"><a href="#butianyun_blog_top">^^^</a><br />
 <h2>手势识别</h2>
 <h3>手势识别任务</h3>
 <h4>定义作用</h4>
@@ -1885,6 +1904,7 @@ tips = [tuple(p[0]) for p in hull if (p[0][1] - cy) &gt; -40]    # 筛选质心�
 网站：<strong>BUTIANYUN.COM</strong></p>
 <p>微信公众号有400+篇<strong>计算机视觉技术</strong>经典前沿技术博客，包括YOLO、DETR、ViT、CLIP、SAM、DINO、PointNet、SLAM、3DGS。</p>
 <hr />
+<a name="subject_visualization"><a href="#butianyun_blog_top">^^^</a><br />
 <h2>可视化</h2>
 <h3>类激活图（CAM）</h3>
 <h4>定义作用</h4>
@@ -2098,6 +2118,7 @@ torch.onnx.export(model, torch.randn(1, 3, 640, 640), &quot;model.onnx&quot;,
 网站：<strong>BUTIANYUN.COM</strong></p>
 <p>微信公众号有400+篇<strong>计算机视觉技术</strong>经典前沿技术博客，包括YOLO、DETR、ViT、CLIP、SAM、DINO、PointNet、SLAM、3DGS。</p>
 <hr />
+<a name="subject_data_label"><a href="#butianyun_blog_top">^^^</a><br />
 <h2>数据标注</h2>
 <h3>数据标注</h3>
 <h4>定义作用</h4>
@@ -2306,6 +2327,7 @@ print(np.unique(mask))   # 出现过的类别索引（含背景 0）
 网站：<strong>BUTIANYUN.COM</strong></p>
 <p>微信公众号有400+篇<strong>计算机视觉技术</strong>经典前沿技术博客，包括YOLO、DETR、ViT、CLIP、SAM、DINO、PointNet、SLAM、3DGS。</p>
 <hr />
+<a name="subject_data_augumentation"><a href="#butianyun_blog_top">^^^</a><br />
 <h2>数据增强</h2>
 <h3>数据增强</h3>
 <h4>定义作用</h4>
@@ -2531,6 +2553,7 @@ def mixup(model, x, y, alpha=0.2):
 网站：<strong>BUTIANYUN.COM</strong></p>
 <p>微信公众号有400+篇<strong>计算机视觉技术</strong>经典前沿技术博客，包括YOLO、DETR、ViT、CLIP、SAM、DINO、PointNet、SLAM、3DGS。</p>
 <hr />
+<a name="subject_data_process"><a href="#butianyun_blog_top">^^^</a><br />
 <h2>数据处理</h2>
 <h3>数据集与数据集划分</h3>
 <h4>定义作用</h4>
@@ -2766,6 +2789,7 @@ def convert(xml_path, out_dir):
 网站：<strong>BUTIANYUN.COM</strong></p>
 <p>微信公众号有400+篇<strong>计算机视觉技术</strong>经典前沿技术博客，包括YOLO、DETR、ViT、CLIP、SAM、DINO、PointNet、SLAM、3DGS。</p>
 <hr />
+<a name="subject_network_trainning"><a href="#butianyun_blog_top">^^^</a><br />
 <h2>网络训练</h2>
 <h3>训练集/验证集/测试集</h3>
 <h4>定义作用</h4>
@@ -2993,6 +3017,7 @@ for epoch in range(50):
 网站：<strong>BUTIANYUN.COM</strong></p>
 <p>微信公众号有400+篇<strong>计算机视觉技术</strong>经典前沿技术博客，包括YOLO、DETR、ViT、CLIP、SAM、DINO、PointNet、SLAM、3DGS。</p>
 <hr />
+<a name="subject_model_deploy"><a href="#butianyun_blog_top">^^^</a><br />
 <h2>模型部署</h2>
 <h3>模型转换</h3>
 <h4>定义作用</h4>
@@ -3222,7 +3247,9 @@ YOLO(&quot;yolov8n.pt&quot;).export(format=&quot;onnx&quot;, int8=True, data=&qu
 网站：<strong>BUTIANYUN.COM</strong></p>
 <p>微信公众号有400+篇<strong>计算机视觉技术</strong>经典前沿技术博客，包括YOLO、DETR、ViT、CLIP、SAM、DINO、PointNet、SLAM、3DGS。</p>
 <hr />
+<a name="opensource"><a href="#butianyun_blog_top">^^^</a><br />
 <h1>开源框架</h1>
+<a name="opensource_opencv"><a href="#butianyun_blog_top">^^^</a><br />
 <h2>OpenCV</h2>
 <h3>基础介绍</h3>
 <p><strong>精准定义</strong>：OpenCV（Open Source Computer Vision Library，开源计算机视觉库）是一个跨平台的开源计算机视觉与图像处理算法库，以 C++ 实现核心算子，并对外提供 C++、Python、Java、JavaScript（WebAssembly）等多语言接口，功能覆盖图像与视频读写、色彩空间变换、滤波与卷积、几何变换、形态学、轮廓与分割、特征点检测与匹配、相机标定与三维重建、传统目标检测、计算摄影以及深度神经网络推理等。</p>
@@ -3306,6 +3333,7 @@ cv2.destroyAllWindows()
 网站：<strong>BUTIANYUN.COM</strong></p>
 <p>微信公众号有400+篇<strong>计算机视觉技术</strong>经典前沿技术博客，包括YOLO、DETR、ViT、CLIP、SAM、DINO、PointNet、SLAM、3DGS。</p>
 <hr />
+<a name="opensource_pytorch"><a href="#butianyun_blog_top">^^^</a><br />
 <h2>PyTorch</h2>
 <h3>基础介绍</h3>
 <p><strong>精准定义</strong>：PyTorch 是一个以 Python 为首要接口、以 C++ 为高性能后端实现的开源深度学习框架，核心能力包括多维张量（Tensor）计算（支持 CPU 与多种加速器）、基于自动微分（Automatic Differentiation）的反向传播、神经网络构建与训练工具链（torch.nn、torch.optim、torch.utils.data），以及面向部署的模型导出能力（TorchScript、torch.onnx.export、torch.export）。</p>
@@ -3401,6 +3429,7 @@ torch.onnx.export(model, dummy, &quot;resnet18.onnx&quot;, input_names=[&quot;in
 网站：<strong>BUTIANYUN.COM</strong></p>
 <p>微信公众号有400+篇<strong>计算机视觉技术</strong>经典前沿技术博客，包括YOLO、DETR、ViT、CLIP、SAM、DINO、PointNet、SLAM、3DGS。</p>
 <hr />
+<a name="opensource_yolo"><a href="#butianyun_blog_top">^^^</a><br />
 <h2>Ultralytics YOLO</h2>
 <h3>基础介绍</h3>
 <p><strong>精准定义</strong>：Ultralytics YOLO 是由 Ultralytics 公司开发并维护的开源计算机视觉模型库，Python 包名为 <code>ultralytics</code>，以 YOLO（You Only Look Once，你只需看一次）系列实时目标检测模型为核心，底层基于 PyTorch 实现，并向外提供统一的 Python 接口与命令行工具 <code>yolo</code>。它把目标检测、实例分割、图像分类、姿态估计、旋转框检测与目标跟踪六类任务收敛到同一套接口之下，覆盖从数据配置、模型训练、指标验证、推理预测到模型导出的完整链路。</p>
@@ -3488,6 +3517,7 @@ model.export(format=&quot;onnx&quot;)             # 导出为 ONNX
 网站：<strong>BUTIANYUN.COM</strong></p>
 <p>微信公众号有400+篇<strong>计算机视觉技术</strong>经典前沿技术博客，包括YOLO、DETR、ViT、CLIP、SAM、DINO、PointNet、SLAM、3DGS。</p>
 <hr />
+<a name="opensource_dlib"><a href="#butianyun_blog_top">^^^</a><br />
 <h2>dlib</h2>
 <h3>基础介绍</h3>
 <p><strong>精准定义</strong>：dlib 是由 Davis King 开发并长期维护的开源通用机器学习与计算机视觉工具库，主体以 C++ 编写，采用"头文件库"为主的形态发布，同时通过 Python 绑定提供广为人知的 <code>dlib</code> 模块。它的覆盖面横跨数值优化、线性代数、支持向量机与核方法、聚类与降维、图像处理、目标检测与跟踪，以及自带的深度神经网络模块；而在实际工程中，它最被熟知的身份是一套完整、稳定、纯 CPU 即可运行的人脸分析工具链——正面人脸检测器、六十八点人脸关键点预测器、人脸对齐与人脸特征嵌入。</p>
@@ -3577,6 +3607,7 @@ tracker.start_track(img, dlib.rectangle(100, 120, 260, 300))
 网站：<strong>BUTIANYUN.COM</strong></p>
 <p>微信公众号有400+篇<strong>计算机视觉技术</strong>经典前沿技术博客，包括YOLO、DETR、ViT、CLIP、SAM、DINO、PointNet、SLAM、3DGS。</p>
 <hr />
+<a name="opensource_deepface"><a href="#butianyun_blog_top">^^^</a><br />
 <h2>DeepFace</h2>
 <h3>基础介绍</h3>
 <p><strong>精准定义</strong>：DeepFace 是一个面向 Python 的轻量级开源人脸识别与人脸属性分析框架（库），由 Sefik Ilkin Serengil 发起并维护，以 PyPI 上的 <code>deepface</code> 包形式分发。它把人脸识别的完整流水线——人脸检测（Face Detection）、人脸对齐（Face Alignment）、人脸特征嵌入（Face Embedding）、人脸验证与识别（Verification / Recognition）、人脸属性分析（Facial Attribute Analysis）——封装为几行 Python 调用，同时以插件化方式整合了多种识别模型（VGG-Face、Facenet、Facenet512、OpenFace、DeepFace、DeepID、ArcFace、Dlib 等）与多种检测器后端（opencv、ssd、dlib、mtcnn、retinaface、mediapipe、yolov8、centerface 等），底层依赖 TensorFlow 与 PyTorch/Keras 等深度学习框架以及 OpenCV、dlib 等基础库，采用 MIT 开源许可。</p>
@@ -3681,6 +3712,7 @@ DeepFace.stream(
 网站：<strong>BUTIANYUN.COM</strong></p>
 <p>微信公众号有400+篇<strong>计算机视觉技术</strong>经典前沿技术博客，包括YOLO、DETR、ViT、CLIP、SAM、DINO、PointNet、SLAM、3DGS。</p>
 <hr />
+<a name="opensource_onnx"><a href="#butianyun_blog_top">^^^</a><br />
 <h2>ONNX</h2>
 <h3>基础介绍</h3>
 <p><strong>精准定义</strong>：ONNX（Open Neural Network Exchange，开放式神经网络交换格式）是一种开放的机器学习模型中间表示标准，用统一的计算图（Graph）、标准化的算子集（Operator Set，简称 opset）与张量数据类型描述神经网络的前向计算过程，并把整张图序列化为一个 <code>.onnx</code> 文件（基于 Protocol Buffers 的二进制序列化）。它不绑定任何训练框架，也不绑定任何硬件，作用是让模型可在不同训练框架与不同推理引擎之间自由流通，采用 Apache-2.0 开源许可，现为 Linux Foundation AI &amp; Data 基金会旗下的开放治理项目。</p>
@@ -3775,6 +3807,7 @@ YOLO(&quot;yolov8n.pt&quot;).export(format=&quot;onnx&quot;, imgsz=640, dynamic=
 网站：<strong>BUTIANYUN.COM</strong></p>
 <p>微信公众号有400+篇<strong>计算机视觉技术</strong>经典前沿技术博客，包括YOLO、DETR、ViT、CLIP、SAM、DINO、PointNet、SLAM、3DGS。</p>
 <hr />
+<a name="opensource_onnx_runtime"><a href="#butianyun_blog_top">^^^</a><br />
 <h2>ONNX Runtime</h2>
 <h3>基础介绍</h3>
 <p><strong>精准定义</strong>：ONNX Runtime（常缩写为 ORT）是由微软主导开源并持续维护的跨平台高性能推理引擎（Inference Engine），用于执行符合 ONNX（Open Neural Network Exchange，开放神经网络交换格式）规范的模型文件（<code>.onnx</code>）。它本身不承担训练职责，只负责把训练框架导出的计算图在目标硬件上高效、稳定地执行，对外提供 Python、C、C++、C#、Java、JavaScript（浏览器端）等多语言 API。</p>
@@ -3870,6 +3903,7 @@ Ort::Session session(env, L&quot;model.onnx&quot;, opts);          // Ort::Sessi
 网站：<strong>BUTIANYUN.COM</strong></p>
 <p>微信公众号有400+篇<strong>计算机视觉技术</strong>经典前沿技术博客，包括YOLO、DETR、ViT、CLIP、SAM、DINO、PointNet、SLAM、3DGS。</p>
 <hr />
+<a name="opensource_openvino"><a href="#butianyun_blog_top">^^^</a><br />
 <h2>OpenVINO</h2>
 <h3>基础介绍</h3>
 <p><strong>精准定义</strong>：OpenVINO（Open Visual Inference and Neural Network Optimization，开放式视觉推理与神经网络优化）是由英特尔（Intel）主导开源的推理与部署工具套件，用于把训练好的深度学习模型在 Intel 硬件上做优化与加速推理，覆盖 Intel CPU、集成显卡（iGPU）、独立显卡以及 NPU（Neural Processing Unit，神经处理单元）等计算设备。传统流程由模型优化器（Model Optimizer）把 ONNX、TensorFlow、PyTorch（通常先导出为 ONNX）等格式的模型转换为 OpenVINO 的中间表示 IR（Intermediate Representation，由描述网络拓扑的 <code>.xml</code> 与存放权重的 <code>.bin</code> 两个文件组成），再由运行时加载并编译后执行推理。</p>
@@ -3982,6 +4016,7 @@ ov::InferRequest request = compiled.create_infer_request();
 <p>微信公众号有400+篇<strong>计算机视觉技术</strong>经典前沿技术博客，包括YOLO、DETR、ViT、CLIP、SAM、DINO、PointNet、SLAM、3DGS。</p>
 <hr />
 
+<a  href="#butianyun_blog_top">^^^</a>
 
 <p>
 <ul>
@@ -3999,6 +4034,16 @@ ov::InferRequest request = compiled.create_infer_request();
     </li>
 </ul>
 </p>
+
+
+
+    <h1>BUTIANYUN.COM计算机视觉实践软件产品 A系列 技术体系</h1>
+
+    <hr />
+
+<center>
+  <B>BUTIANYUN.COM</B>
+</center>
 
 </body>
 </html>
